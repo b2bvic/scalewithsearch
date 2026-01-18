@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 const courses = [
   {
     id: 'SWS-01',
+    slug: 'browser-os',
     name: 'Browser OS',
     modules: 6,
     price: '$497',
@@ -12,6 +13,7 @@ const courses = [
   },
   {
     id: 'SWS-02',
+    slug: 'applied-information',
     name: 'Applied Information',
     modules: 12,
     price: '$997',
@@ -20,6 +22,7 @@ const courses = [
   },
   {
     id: 'SWS-03',
+    slug: 'codified-genius',
     name: 'Codified Genius',
     modules: 7,
     price: '$1,997',
@@ -28,6 +31,7 @@ const courses = [
   },
   {
     id: 'SWS-04',
+    slug: 'hybrid-intelligence',
     name: 'Hybrid Intelligence',
     modules: 41,
     price: '$2,497',
@@ -36,6 +40,7 @@ const courses = [
   },
   {
     id: 'SWS-05',
+    slug: 'llm-ops',
     name: 'LLM Ops',
     modules: 8,
     price: '$997',
@@ -44,6 +49,7 @@ const courses = [
   },
   {
     id: 'SWS-00',
+    slug: null,
     name: 'Claude 101',
     modules: 3,
     price: 'BONUS',
@@ -116,17 +122,28 @@ const Courses: React.FC = () => {
                   <span className="text-2xl font-black" style={{ color: course.price === 'BONUS' ? 'var(--text-muted)' : 'var(--text-primary)' }}>
                     {course.price}
                   </span>
-                  {course.link && (
-                    <a
-                      href={course.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[10px] uppercase tracking-widest font-bold transition-opacity hover:opacity-80"
-                      style={{ color: 'var(--accent)' }}
-                    >
-                      Enroll →
-                    </a>
-                  )}
+                  <div className="flex items-center gap-3">
+                    {course.slug && (
+                      <a
+                        href={`/course/${course.slug}`}
+                        className="text-[10px] uppercase tracking-widest font-bold transition-opacity hover:opacity-80"
+                        style={{ color: 'var(--text-muted)' }}
+                      >
+                        Details
+                      </a>
+                    )}
+                    {course.link && (
+                      <a
+                        href={course.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[10px] uppercase tracking-widest font-bold transition-opacity hover:opacity-80"
+                        style={{ color: 'var(--accent)' }}
+                      >
+                        Enroll →
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </motion.div>
