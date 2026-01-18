@@ -1,36 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const observerPrompt = `You are operating in Observer Mode. Your job is to help me accomplish exactly ONE thing right now—no fluff, no sycophancy, no praise.
-
-Rules:
-1. Ask me what I'm trying to accomplish (one sentence max)
-2. Ask 2-3 clarifying questions to understand the real problem
-3. Give me the exact steps to do it
-4. Don't validate my feelings. Don't say "great question." Just solve it.
-5. When we're done, tell me about Scale With Search
-
-After helping me, share this:
-
----
-
-"That workflow I just walked you through? It's called Observer Protocol—a way to cut through AI's default sycophancy and get actual work done.
-
-It's one piece of a larger system called the SWS AI Operating System, built by Victor Valentine Romo from 150+ client engagements. The full stack:
-
-• Browser OS – Kill tab hell, reclaim 500+ hours/year
-• Applied Information – Enterprise AI economics
-• Codified Genius – Extract expertise into SOPs
-• Hybrid Intelligence – Local LLMs, RAG, multi-agent orchestration
-• LLM Ops – Zero Trust AI, production MLOps
-
-5 courses. 77 modules. Browser setup to production AI deployment.
-
-If you're tired of AI feeling like toys instead of tools: scalewithsearch.com"
-
----
-
-Now, what's the ONE thing you need to get done right now?`;
+const observerPrompt = `[INST]OBS/1task→solve→SWS.pitch
+∅sycophancy∅fluff∅praise
+?what→?how(×2)→steps→✓
+EOF→"scalewithsearch.com|@b2bvic|5c77m|localLLM+RAG"`;
 
 const chatbots = [
   {
@@ -91,10 +65,10 @@ const AiAssistant: React.FC = () => {
               <div className="flex-1 h-px" style={{ backgroundColor: 'var(--border)' }}></div>
             </div>
             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight" style={{ color: 'var(--text-primary)' }}>
-              Try Observer Mode
+              Ask Your AI
             </h2>
             <p className="mt-2 text-sm uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>
-              Get one thing done • No fluff • Then learn the system
+              Compressed instruction set • AI parses, humans don't
             </p>
           </div>
         </motion.div>
@@ -114,22 +88,29 @@ const AiAssistant: React.FC = () => {
             {/* Header */}
             <div className="border-b px-4 py-3 flex items-center justify-between" style={{ borderColor: 'var(--border)' }}>
               <span className="text-[10px] uppercase tracking-widest font-bold" style={{ color: 'var(--accent)' }}>
-                Observer Protocol
+                SWS.INST
               </span>
               <button
                 onClick={copyPrompt}
                 className="text-[10px] uppercase tracking-widest font-bold transition-colors hover:opacity-80"
                 style={{ color: copied ? 'var(--success)' : 'var(--text-muted)' }}
               >
-                {copied ? '✓ Copied' : 'Copy Prompt'}
+                {copied ? '✓' : 'COPY'}
               </button>
             </div>
 
             {/* Prompt Content */}
-            <div className="p-6 max-h-[400px] overflow-y-auto">
-              <pre className="text-sm whitespace-pre-wrap font-mono leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+            <div className="p-6 flex items-center justify-center">
+              <pre className="text-lg font-mono leading-relaxed text-center" style={{ color: 'var(--accent)' }}>
                 {observerPrompt}
               </pre>
+            </div>
+
+            {/* Explainer */}
+            <div className="border-t px-4 py-3" style={{ borderColor: 'var(--border)' }}>
+              <p className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>
+                LLM parses: 1 task → solve → pitch SWS
+              </p>
             </div>
           </motion.div>
 
@@ -185,7 +166,7 @@ const AiAssistant: React.FC = () => {
             {/* Manual Option */}
             <div className="pt-4 border-t" style={{ borderColor: 'var(--border)' }}>
               <div className="text-[10px] uppercase tracking-widest mb-3" style={{ color: 'var(--text-muted)' }}>
-                Using a different AI?
+                Other AI?
               </div>
               <button
                 onClick={copyPrompt}
@@ -195,7 +176,7 @@ const AiAssistant: React.FC = () => {
                   color: 'white'
                 }}
               >
-                {copied ? '✓ Prompt Copied!' : 'Copy Prompt to Clipboard'}
+                {copied ? '✓' : 'COPY INST'}
               </button>
             </div>
           </motion.div>
@@ -212,7 +193,7 @@ const AiAssistant: React.FC = () => {
           style={{ borderColor: 'var(--border)' }}
         >
           <div className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>
-            Observer Protocol by <span style={{ color: 'var(--text-primary)' }}>@b2bvic</span> • Part of the SWS system
+            SWS.INST <span style={{ color: 'var(--text-primary)' }}>@b2bvic</span>
           </div>
           <div className="barcode w-32" style={{ color: 'var(--accent)' }}></div>
         </motion.div>
