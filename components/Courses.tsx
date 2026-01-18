@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const courses = [
   {
@@ -53,55 +54,66 @@ const courses = [
 
 const Courses: React.FC = () => {
   return (
-    <section id="courses" className="py-20 md:py-32 border-b border-[#1e3a5f]">
+    <section id="courses" className="py-20 md:py-32 border-b" style={{ borderColor: 'var(--border)' }}>
       <div className="max-w-7xl mx-auto px-4 md:px-8">
 
         {/* Section Header */}
-        <div className="grid grid-cols-12 gap-4 mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="grid grid-cols-12 gap-4 mb-12"
+        >
           <div className="col-span-12 lg:col-span-8">
             <div className="flex items-center gap-4 mb-4">
-              <span className="text-[10px] uppercase tracking-widest text-[#64748b]">Section</span>
-              <span className="text-[10px] uppercase tracking-widest text-[#2563eb]">02</span>
-              <div className="flex-1 h-px bg-[#1e3a5f]"></div>
+              <span className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>Section</span>
+              <span className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--accent)' }}>02</span>
+              <div className="flex-1 h-px" style={{ backgroundColor: 'var(--border)' }}></div>
             </div>
-            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight text-[#e2e8f0]">
+            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight" style={{ color: 'var(--text-primary)' }}>
               The Stack
             </h2>
-            <p className="text-[#64748b] mt-2 text-sm uppercase tracking-wider">
+            <p className="mt-2 text-sm uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>
               77 modules • 6 production capstones • Browser → Autonomous Agents
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Course Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {courses.map((course) => (
-            <div
+          {courses.map((course, i) => (
+            <motion.div
               key={course.id}
-              className="bg-[#0c1220] border border-[#1e3a5f] hover:border-[#2563eb]/50 transition-colors group"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 0.5 }}
+              className="border transition-all hover:translate-y-[-2px] group"
+              style={{ backgroundColor: 'var(--bg-panel)', borderColor: 'var(--border)' }}
             >
               {/* Card Header */}
-              <div className="border-b border-[#1e3a5f] px-4 py-3 flex items-center justify-between">
-                <span className="text-[10px] uppercase tracking-widest text-[#2563eb] font-bold">
+              <div className="border-b px-4 py-3 flex items-center justify-between" style={{ borderColor: 'var(--border)' }}>
+                <span className="text-[10px] uppercase tracking-widest font-bold" style={{ color: 'var(--accent)' }}>
                   {course.id}
                 </span>
-                <span className="text-[10px] uppercase tracking-widest text-[#64748b]">
+                <span className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>
                   {course.modules} Modules
                 </span>
               </div>
 
               {/* Card Body */}
               <div className="p-4">
-                <h3 className="text-xl font-black uppercase tracking-tight text-[#e2e8f0] mb-2 group-hover:text-[#2563eb] transition-colors">
+                <h3 className="text-xl font-black uppercase tracking-tight mb-2 transition-colors" style={{ color: 'var(--text-primary)' }}>
                   {course.name}
                 </h3>
-                <p className="text-sm text-[#64748b] mb-4 min-h-[40px]">
+                <p className="text-sm mb-4 min-h-[40px]" style={{ color: 'var(--text-muted)' }}>
                   {course.desc}
                 </p>
 
                 {/* Price & Action */}
-                <div className="flex items-center justify-between pt-4 border-t border-[#1e3a5f]">
-                  <span className={`text-2xl font-black ${course.price === 'BONUS' ? 'text-[#64748b]' : 'text-[#e2e8f0]'}`}>
+                <div className="flex items-center justify-between pt-4 border-t" style={{ borderColor: 'var(--border)' }}>
+                  <span className="text-2xl font-black" style={{ color: course.price === 'BONUS' ? 'var(--text-muted)' : 'var(--text-primary)' }}>
                     {course.price}
                   </span>
                   {course.link && (
@@ -109,26 +121,34 @@ const Courses: React.FC = () => {
                       href={course.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[10px] uppercase tracking-widest text-[#2563eb] hover:text-[#3b82f6] transition-colors font-bold"
+                      className="text-[10px] uppercase tracking-widest font-bold transition-opacity hover:opacity-80"
+                      style={{ color: 'var(--accent)' }}
                     >
                       Enroll →
                     </a>
                   )}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Bottom Stats */}
-        <div className="mt-12 pt-8 border-t border-[#1e3a5f] flex flex-wrap items-center justify-between gap-4">
-          <div className="flex items-center gap-8 text-[10px] uppercase tracking-widest text-[#64748b]">
-            <span>Total: <span className="text-[#e2e8f0] font-bold">77 Modules</span></span>
-            <span>Capstones: <span className="text-[#e2e8f0] font-bold">6</span></span>
-            <span>Runtime: <span className="text-[#e2e8f0] font-bold">~120hrs</span></span>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+          className="mt-12 pt-8 border-t flex flex-wrap items-center justify-between gap-4"
+          style={{ borderColor: 'var(--border)' }}
+        >
+          <div className="flex items-center gap-8 text-[10px] uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>
+            <span>Total: <span className="font-bold" style={{ color: 'var(--text-primary)' }}>77 Modules</span></span>
+            <span>Capstones: <span className="font-bold" style={{ color: 'var(--text-primary)' }}>6</span></span>
+            <span>Runtime: <span className="font-bold" style={{ color: 'var(--text-primary)' }}>~120hrs</span></span>
           </div>
-          <div className="barcode w-32 text-[#2563eb]"></div>
-        </div>
+          <div className="barcode w-32" style={{ color: 'var(--accent)' }}></div>
+        </motion.div>
 
       </div>
     </section>

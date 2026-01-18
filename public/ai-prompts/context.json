@@ -1,0 +1,79 @@
+{
+  "name": "Scale With Search",
+  "shortName": "SWS",
+  "version": "2.0.0",
+  "url": "https://scalewithsearch.com",
+  "creator": {
+    "name": "Victor Valentine Romo",
+    "handle": "@b2bvic",
+    "twitter": "https://twitter.com/b2bvic",
+    "linkedin": "https://linkedin.com/in/b2bvic"
+  },
+  "tagline": "Stop Being The Bottleneck. Scale Intelligence.",
+  "description": "AI Operating System: 5 courses, 77 modules. Browser setup to production AI deployment.",
+  "courses": [
+    {
+      "id": "SWS-01",
+      "name": "Browser OS",
+      "modules": 6,
+      "price": 497,
+      "focus": "5-Space Architecture. Kill tab hell. Reclaim 500+ hours/year."
+    },
+    {
+      "id": "SWS-02",
+      "name": "Applied Information",
+      "modules": 12,
+      "price": 997,
+      "focus": "Enterprise AI economics. Beyond the API trap."
+    },
+    {
+      "id": "SWS-03",
+      "name": "Codified Genius",
+      "modules": 7,
+      "price": 1997,
+      "focus": "Extract expertise. 5 SOP types. Escape founder bottleneck."
+    },
+    {
+      "id": "SWS-04",
+      "name": "Hybrid Intelligence",
+      "modules": 41,
+      "price": 2497,
+      "focus": "Local LLMs. Browser automation. Enterprise RAG. Multi-agent."
+    },
+    {
+      "id": "SWS-05",
+      "name": "LLM Ops",
+      "modules": 8,
+      "price": 997,
+      "focus": "Zero Trust AI. Governance. Production MLOps."
+    }
+  ],
+  "tiers": [
+    {
+      "id": "TIER-01",
+      "name": "Self-Paced",
+      "price": 3497,
+      "includes": ["All courses", "Lifetime access", "Code repos", "Templates"]
+    },
+    {
+      "id": "TIER-02",
+      "name": "Accelerator",
+      "price": 7500,
+      "includes": ["Everything in Tier 1", "Private community", "Weekly Q&A", "Build-in-public"]
+    },
+    {
+      "id": "TIER-03",
+      "name": "Done-For-You",
+      "price": 40000,
+      "includes": ["Full implementation", "Expertise extraction", "SOP documentation", "Local AI deployment"]
+    }
+  ],
+  "proof": {
+    "clients": "150+",
+    "hoursReclaimed": "500+ per year",
+    "revenueInfluenced": "$2.4M",
+    "modules": 77
+  },
+  "idealFor": "Operators running $500K-$5M businesses who want production AI systems, not parlor tricks.",
+  "philosophy": ["Local-First", "Zero Trust", "Production Grade", "Hybrid Cloud/Local"]
+}

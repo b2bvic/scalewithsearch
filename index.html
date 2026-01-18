@@ -4,19 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Scale With Search | AI Operating System</title>
-    <meta name="description" content="Stop being the bottleneck. The SWS AI Operating System: 5 courses, 77 modules. Browser setup to production AI deployment. Built from 150+ client engagements." />
-    <meta name="keywords" content="Scale With Search, SWS, AI Operating System, Local LLM, Hybrid Intelligence, Browser OS, Codified Genius, LLM Ops" />
+    <!-- Primary Meta -->
+    <title>Scale With Search | AI Operating System by Victor Valentine Romo</title>
+    <meta name="description" content="Stop being the bottleneck. The SWS AI Operating System: 5 courses, 77 modules. Browser setup to production AI deployment. Local LLMs, RAG, multi-agent orchestration. Built from 150+ client engagements by Victor Valentine Romo." />
+    <meta name="keywords" content="Scale With Search, SWS, AI Operating System, Local LLM, Hybrid Intelligence, Browser OS, Codified Genius, LLM Ops, Applied Information, Victor Valentine Romo, b2bvic, AI courses, enterprise AI, production AI, RAG, multi-agent" />
     <meta name="author" content="Victor Valentine Romo" />
     <link rel="canonical" href="https://scalewithsearch.com" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
-    <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Scale With Search | AI Operating System" />
-    <meta property="og:description" content="Stop being the bottleneck. 5 courses. 77 modules. Browser to production." />
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Scale With Search" />
     <meta property="og:url" content="https://scalewithsearch.com" />
+    <meta property="og:title" content="Scale With Search | AI Operating System" />
+    <meta property="og:description" content="Stop being the bottleneck. 5 courses, 77 modules. Browser setup to production AI deployment. Local LLMs, RAG, multi-agent orchestration." />
+    <meta property="og:image" content="https://scalewithsearch.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Scale With Search - AI Operating System" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@b2bvic" />
+    <meta name="twitter:creator" content="@b2bvic" />
+    <meta name="twitter:title" content="Scale With Search | AI Operating System" />
+    <meta name="twitter:description" content="Stop being the bottleneck. 5 courses, 77 modules. Browser to production AI deployment." />
+    <meta name="twitter:image" content="https://scalewithsearch.com/og-image.png" />
+    <meta name="twitter:image:alt" content="Scale With Search - AI Operating System" />
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#080c14" />
+    <meta name="msapplication-TileColor" content="#2563eb" />
+    <link rel="alternate" type="application/json" href="https://scalewithsearch.com/llms.txt" title="AI-readable site data" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,11 +70,60 @@
       }
     </script>
     <style>
+      /* Theme: Dark (default) */
+      :root, [data-theme="dark"] {
+        --bg-base: #080c14;
+        --bg-panel: #0c1220;
+        --bg-elevated: #111827;
+        --accent: #2563eb;
+        --accent-muted: #1e40af;
+        --accent-light: #3b82f6;
+        --text-primary: #e2e8f0;
+        --text-secondary: #94a3b8;
+        --text-muted: #64748b;
+        --border: #1e3a5f;
+        --success: #22c55e;
+        --header-bg: rgba(8, 12, 20, 0.95);
+      }
+
+      /* Theme: Light */
+      [data-theme="light"] {
+        --bg-base: #f8fafc;
+        --bg-panel: #ffffff;
+        --bg-elevated: #f1f5f9;
+        --accent: #2563eb;
+        --accent-muted: #3b82f6;
+        --accent-light: #60a5fa;
+        --text-primary: #0f172a;
+        --text-secondary: #475569;
+        --text-muted: #64748b;
+        --border: #cbd5e1;
+        --success: #16a34a;
+        --header-bg: rgba(248, 250, 252, 0.95);
+      }
+
+      /* Theme: Ultradark (OLED Red) */
+      [data-theme="ultradark"] {
+        --bg-base: #000000;
+        --bg-panel: #0a0000;
+        --bg-elevated: #120000;
+        --accent: #dc2626;
+        --accent-muted: #991b1b;
+        --accent-light: #ef4444;
+        --text-primary: #fecaca;
+        --text-secondary: #f87171;
+        --text-muted: #7f1d1d;
+        --border: #450a0a;
+        --success: #dc2626;
+        --header-bg: rgba(0, 0, 0, 0.98);
+      }
+
       html { scroll-behavior: smooth; }
 
       body {
-        background-color: #080c14;
-        color: #e2e8f0;
+        background-color: var(--bg-base);
+        color: var(--text-primary);
+        transition: background-color 0.3s ease, color 0.3s ease;
       }
 
       /* Corner brackets */
@@ -66,7 +135,7 @@
         position: absolute;
         width: 20px;
         height: 20px;
-        border-color: #1e3a5f;
+        border-color: var(--border);
       }
       .bracket-tl::before { top: -1px; left: -1px; border-top: 2px solid; border-left: 2px solid; }
       .bracket-tr::after { top: -1px; right: -1px; border-top: 2px solid; border-right: 2px solid; }
@@ -83,8 +152,8 @@
       /* Grid pattern */
       .grid-pattern {
         background-image:
-          linear-gradient(to right, #1e3a5f 1px, transparent 1px),
-          linear-gradient(to bottom, #1e3a5f 1px, transparent 1px);
+          linear-gradient(to right, var(--border) 1px, transparent 1px),
+          linear-gradient(to bottom, var(--border) 1px, transparent 1px);
         background-size: 40px 40px;
         opacity: 0.1;
       }
@@ -105,11 +174,11 @@
       }
 
       /* Status dot pulse */
-      @keyframes pulse-blue {
+      @keyframes pulse-accent {
         0%, 100% { opacity: 1; }
         50% { opacity: 0.5; }
       }
-      .pulse-blue { animation: pulse-blue 2s infinite; }
+      .pulse-accent { animation: pulse-accent 2s infinite; }
 
       /* Barcode texture */
       .barcode {
@@ -131,22 +200,234 @@
         height: 24px;
         opacity: 0.3;
       }
+
+      /* Theme transition for smooth switching */
+      *, *::before, *::after {
+        transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+      }
     </style>
 
+    <!-- JSON-LD: Person (Victor Valentine Romo) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Course",
-      "name": "SWS AI Operating System",
-      "description": "5 courses, 77 modules. Browser setup to production AI deployment.",
-      "provider": {
+      "@type": "Person",
+      "@id": "https://scalewithsearch.com/#victor",
+      "name": "Victor Valentine Romo",
+      "alternateName": ["b2bvic", "Victor Romo", "VVR"],
+      "description": "Founder of Scale With Search. AI systems architect specializing in local LLMs, browser automation, enterprise RAG, and multi-agent orchestration. Built systems from 150+ client engagements.",
+      "url": "https://scalewithsearch.com",
+      "image": "https://scalewithsearch.com/victor-romo.jpg",
+      "jobTitle": "Founder & AI Systems Architect",
+      "worksFor": {
         "@type": "Organization",
-        "name": "Scale With Search",
-        "url": "https://scalewithsearch.com"
+        "@id": "https://scalewithsearch.com/#organization"
+      },
+      "knowsAbout": [
+        "Artificial Intelligence",
+        "Local LLMs",
+        "Browser Automation",
+        "Enterprise RAG",
+        "Multi-Agent Orchestration",
+        "SEO",
+        "Information Architecture",
+        "LLM Operations",
+        "Prompt Engineering"
+      ],
+      "sameAs": [
+        "https://twitter.com/b2bvic",
+        "https://linkedin.com/in/b2bvic",
+        "https://github.com/b2bvic"
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD: Organization (Scale With Search) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://scalewithsearch.com/#organization",
+      "name": "Scale With Search",
+      "alternateName": "SWS",
+      "url": "https://scalewithsearch.com",
+      "logo": "https://scalewithsearch.com/logo.png",
+      "description": "AI Operating System education platform. 5 courses, 77 modules covering browser setup to production AI deployment.",
+      "founder": {
+        "@type": "Person",
+        "@id": "https://scalewithsearch.com/#victor"
+      },
+      "foundingDate": "2021",
+      "slogan": "Stop Being The Bottleneck. Scale Intelligence.",
+      "sameAs": [
+        "https://twitter.com/b2bvic",
+        "https://linkedin.com/in/b2bvic"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "url": "https://linkedin.com/in/b2bvic"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://scalewithsearch.com/#website",
+      "url": "https://scalewithsearch.com",
+      "name": "Scale With Search",
+      "description": "AI Operating System - 5 courses, 77 modules",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://scalewithsearch.com/#organization"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD: Course Collection -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "SWS AI Operating System Courses",
+      "description": "Complete curriculum: Browser OS to Production AI Deployment",
+      "numberOfItems": 5,
+      "itemListElement": [
+        {
+          "@type": "Course",
+          "position": 1,
+          "name": "Browser OS",
+          "courseCode": "SWS-01",
+          "description": "5-Space Architecture. Kill tab hell. Reclaim 500+ hours/year.",
+          "numberOfCredits": 6,
+          "provider": {"@id": "https://scalewithsearch.com/#organization"},
+          "offers": {"@type": "Offer", "price": "497", "priceCurrency": "USD"}
+        },
+        {
+          "@type": "Course",
+          "position": 2,
+          "name": "Applied Information",
+          "courseCode": "SWS-02",
+          "description": "Enterprise AI economics. Beyond the API trap. Cost optimization.",
+          "numberOfCredits": 12,
+          "provider": {"@id": "https://scalewithsearch.com/#organization"},
+          "offers": {"@type": "Offer", "price": "997", "priceCurrency": "USD"}
+        },
+        {
+          "@type": "Course",
+          "position": 3,
+          "name": "Codified Genius",
+          "courseCode": "SWS-03",
+          "description": "Extract expertise. 5 SOP types. Escape the founder bottleneck.",
+          "numberOfCredits": 7,
+          "provider": {"@id": "https://scalewithsearch.com/#organization"},
+          "offers": {"@type": "Offer", "price": "1997", "priceCurrency": "USD"}
+        },
+        {
+          "@type": "Course",
+          "position": 4,
+          "name": "Hybrid Intelligence",
+          "courseCode": "SWS-04",
+          "description": "Local LLMs. Browser automation. Enterprise RAG. Multi-agent orchestration.",
+          "numberOfCredits": 41,
+          "provider": {"@id": "https://scalewithsearch.com/#organization"},
+          "offers": {"@type": "Offer", "price": "2497", "priceCurrency": "USD"}
+        },
+        {
+          "@type": "Course",
+          "position": 5,
+          "name": "LLM Ops",
+          "courseCode": "SWS-05",
+          "description": "Zero Trust AI. Governance. Cost optimization. Production MLOps.",
+          "numberOfCredits": 8,
+          "provider": {"@id": "https://scalewithsearch.com/#organization"},
+          "offers": {"@type": "Offer", "price": "997", "priceCurrency": "USD"}
+        }
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD: Product (Bundle Tiers) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "SWS AI Operating System",
+      "description": "Complete AI Operating System: 5 courses, 77 modules. Browser setup to production AI deployment.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Scale With Search"
       },
       "offers": [
-        { "@type": "Offer", "name": "Tier 1 - Self-Paced", "price": "3497", "priceCurrency": "USD" },
-        { "@type": "Offer", "name": "Tier 2 - Accelerator", "price": "7500", "priceCurrency": "USD" }
+        {
+          "@type": "Offer",
+          "name": "Tier 1 - Self-Paced",
+          "price": "3497",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://scalewithsearch.com/#pricing"
+        },
+        {
+          "@type": "Offer",
+          "name": "Tier 2 - Accelerator",
+          "price": "7500",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://scalewithsearch.com/#pricing"
+        },
+        {
+          "@type": "Offer",
+          "name": "Tier 3 - Done-For-You",
+          "price": "40000",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://scalewithsearch.com/#pricing"
+        }
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the SWS AI Operating System?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The SWS AI Operating System is a comprehensive curriculum of 5 courses and 77 modules that takes you from browser setup to production AI deployment. It covers Browser OS, Applied Information, Codified Genius, Hybrid Intelligence, and LLM Ops."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is Victor Valentine Romo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Victor Valentine Romo (b2bvic) is the founder of Scale With Search and an AI systems architect. He built the SWS methodology from 150+ client engagements, specializing in local LLMs, browser automation, enterprise RAG, and multi-agent orchestration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does Hybrid Intelligence cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hybrid Intelligence (SWS-04) is the largest course with 41 modules covering local LLMs, browser automation, enterprise RAG, and multi-agent orchestration. It's the technical core of production AI deployment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between the pricing tiers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tier 1 Self-Paced ($3,497) includes all courses and lifetime access. Tier 2 Accelerator ($7,500) adds private community, weekly Q&A with Vic, and build-in-public sessions. Tier 3 Done-For-You ($40,000+) provides full system implementation with expertise extraction."
+          }
+        }
       ]
     }
     </script>
