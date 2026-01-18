@@ -1,28 +1,10 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Quote, TrendingUp, Users, Clock, DollarSign } from 'lucide-react';
 
 const stats = [
-  {
-    value: '150+',
-    label: 'Client Engagements',
-    icon: Users,
-  },
-  {
-    value: '500+',
-    label: 'Hours Reclaimed/Year',
-    icon: Clock,
-  },
-  {
-    value: '$2.4M',
-    label: 'Revenue Influenced',
-    icon: DollarSign,
-  },
-  {
-    value: '77',
-    label: 'Production Modules',
-    icon: TrendingUp,
-  }
+  { label: 'Client Engagements', value: '150+', sub: 'Enterprise to SMB' },
+  { label: 'Hours Reclaimed/Year', value: '500+', sub: 'Per operator' },
+  { label: 'Revenue Influenced', value: '$2.4M', sub: 'Tracked outcomes' },
+  { label: 'Production Modules', value: '77', sub: 'Battle-tested' }
 ];
 
 const testimonials = [
@@ -42,100 +24,89 @@ const testimonials = [
     quote: "Codified Genius helped me extract 15 years of expertise into repeatable SOPs. My team can finally scale without me.",
     name: "Dr. James Liu",
     title: "Practice Owner",
-    result: "Exited founder bottleneck"
+    result: "Exited bottleneck"
   }
 ];
 
 const Proof: React.FC = () => {
   return (
-    <section id="proof" className="py-24 px-4 md:px-12 bg-bg border-t border-ink/10">
-      <div className="max-w-7xl mx-auto">
+    <section id="proof" className="py-20 md:py-32 border-b border-[#1e3a5f]">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
 
-        {/* Header */}
-        <div className="mb-16">
-          <div className="font-mono text-xs text-gray-500 uppercase tracking-widest mb-4">
-            <span className="text-accent">$</span> cat /var/log/results.log
+        {/* Section Header */}
+        <div className="grid grid-cols-12 gap-4 mb-12">
+          <div className="col-span-12 lg:col-span-8">
+            <div className="flex items-center gap-4 mb-4">
+              <span className="text-[10px] uppercase tracking-widest text-[#64748b]">Section</span>
+              <span className="text-[10px] uppercase tracking-widest text-[#2563eb]">04</span>
+              <div className="flex-1 h-px bg-[#1e3a5f]"></div>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight text-[#e2e8f0]">
+              Proof of Work
+            </h2>
+            <p className="text-[#64748b] mt-2 text-sm uppercase tracking-wider">
+              Built from real engagements • Not theories
+            </p>
           </div>
-          <h2 className="text-4xl md:text-6xl font-black uppercase text-ink tracking-tighter mb-4">
-            Proof of Work
-          </h2>
-          <p className="text-lg text-ink/60 font-mono max-w-2xl">
-            Built from 150+ client engagements. These aren't theories.
-          </p>
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
           {stats.map((stat, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-surface border border-ink/20 p-6 group hover:border-accent/50 transition-colors"
-            >
-              <stat.icon size={20} className="text-accent mb-4" strokeWidth={1.5} />
-              <div className="text-3xl md:text-4xl font-black text-ink mb-1">
-                {stat.value}
-              </div>
-              <div className="font-mono text-xs text-gray-500 uppercase">
+            <div key={i} className="bg-[#0c1220] border border-[#1e3a5f] p-6">
+              <div className="text-[10px] uppercase tracking-widest text-[#64748b] mb-2">
                 {stat.label}
               </div>
-            </motion.div>
+              <div className="text-3xl md:text-4xl font-black text-[#e2e8f0] mb-1">
+                {stat.value}
+              </div>
+              <div className="text-[10px] uppercase tracking-widest text-[#2563eb]">
+                {stat.sub}
+              </div>
+            </div>
           ))}
         </div>
 
         {/* Testimonials */}
-        <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-surface border border-ink/20 relative group hover:border-ink/40 transition-colors"
-            >
-              {/* Terminal Header */}
-              <div className="flex items-center justify-between px-4 py-2 border-b border-ink/10 bg-subtle/50">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-red-500/60"></div>
-                  <div className="w-2 h-2 rounded-full bg-yellow-500/60"></div>
-                  <div className="w-2 h-2 rounded-full bg-green-500/60"></div>
-                </div>
-                <span className="font-mono text-[10px] text-gray-500 uppercase">
-                  TESTIMONIAL_{String(i + 1).padStart(2, '0')}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          {testimonials.map((t, i) => (
+            <div key={i} className="bg-[#0c1220] border border-[#1e3a5f] hover:border-[#2563eb]/50 transition-colors">
+              {/* Card Header */}
+              <div className="border-b border-[#1e3a5f] px-4 py-3 flex items-center justify-between">
+                <span className="text-[10px] uppercase tracking-widest text-[#64748b]">
+                  Testimonial
+                </span>
+                <span className="text-[10px] uppercase tracking-widest text-[#2563eb] font-bold">
+                  {String(i + 1).padStart(2, '0')}
                 </span>
               </div>
 
-              {/* Content */}
+              {/* Card Body */}
               <div className="p-6">
-                <Quote size={24} className="text-accent/30 mb-4" strokeWidth={1} />
-
-                <p className="text-ink/80 mb-6 leading-relaxed">
-                  "{testimonial.quote}"
+                <p className="text-[#94a3b8] mb-6 leading-relaxed">
+                  "{t.quote}"
                 </p>
 
-                <div className="pt-4 border-t border-ink/10">
-                  <div className="font-bold text-ink">
-                    {testimonial.name}
+                <div className="pt-4 border-t border-[#1e3a5f]">
+                  <div className="font-bold text-[#e2e8f0] text-sm">{t.name}</div>
+                  <div className="text-[10px] uppercase tracking-widest text-[#64748b] mb-3">
+                    {t.title}
                   </div>
-                  <div className="font-mono text-xs text-gray-500 mb-3">
-                    {testimonial.title}
-                  </div>
-                  <div className="inline-block px-2 py-1 bg-accent/10 border border-accent/20 font-mono text-xs text-accent font-bold">
-                    {testimonial.result}
+                  <div className="inline-block px-2 py-1 bg-[#1e3a5f] text-[10px] uppercase tracking-widest text-[#2563eb] font-bold">
+                    {t.result}
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        {/* Bottom Note */}
-        <div className="mt-12 font-mono text-sm text-gray-500">
-          <span className="text-accent">$</span> grep -c "success" /var/log/results.log → <span className="text-accent">150+</span>
+        {/* Bottom Data */}
+        <div className="mt-12 pt-8 border-t border-[#1e3a5f] flex flex-wrap items-center justify-between gap-4">
+          <div className="text-[10px] uppercase tracking-widest text-[#64748b]">
+            Data from: <span className="text-[#e2e8f0]">2021-2026</span> • Verified outcomes
+          </div>
+          <div className="barcode w-32 text-[#2563eb]"></div>
         </div>
 
       </div>

@@ -1,132 +1,55 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Hero from './components/Hero';
+import Courses from './components/Courses';
 import Pricing from './components/Pricing';
 import Proof from './components/Proof';
-import Courses from './components/Courses';
-import FinalAction from './components/FinalAction';
 import Footer from './components/Footer';
-import MarqueeTape from './components/MarqueeTape';
-import BootLoader from './components/BootLoader';
-import { Linkedin, Twitter, Moon, Sun } from 'lucide-react';
-import { AnimatePresence } from 'framer-motion';
 
 const App: React.FC = () => {
-  const [theme, setTheme] = useState<string>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('theme');
-      if (saved) return saved;
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    return 'light';
-  });
-
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const root = window.document.documentElement;
-    root.classList.remove('light', 'dark');
-    root.classList.add(theme);
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme(prev => prev === 'light' ? 'dark' : 'light');
-  };
-
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
-    e.preventDefault();
-    const element = document.getElementById(targetId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <>
-      <AnimatePresence>
-        {isLoading && (
-          <BootLoader onComplete={() => setIsLoading(false)} />
-        )}
-      </AnimatePresence>
+    <div className="min-h-screen bg-[#080c14] text-[#e2e8f0] font-mono">
 
-      {!isLoading && (
-        <div className="min-h-screen bg-bg text-ink font-sans selection:bg-accent selection:text-white transition-colors duration-300 overflow-x-hidden">
-          {/* Navigation */}
-          <nav className="sticky top-0 left-0 w-full z-40 bg-surface/80 backdrop-blur-md border-b border-ink/10 transition-colors duration-300">
-            <div className="max-w-7xl mx-auto px-4 md:px-8 h-16 md:h-20 flex items-center justify-between">
-
-              {/* Logo */}
-              <div className="flex items-center gap-3 group cursor-default">
-                <div className="relative">
-                  <span className="text-2xl" style={{ color: '#2563eb' }}>🌐</span>
-                </div>
-                <div className="flex flex-col justify-center h-full">
-                  <span className="font-black text-lg tracking-tight leading-none mt-1 text-ink">Scale With Search</span>
-                  <span className="font-mono text-[9px] font-bold text-gray-500 uppercase tracking-widest leading-none">AI Operating System</span>
-                </div>
-              </div>
-
-              <div className="hidden md:flex items-center gap-8 text-xs font-bold font-mono uppercase tracking-wider text-gray-500">
-                <a
-                  href="#courses"
-                  onClick={(e) => handleNavClick(e, 'courses')}
-                  className="hover:text-ink transition-colors relative group py-2"
-                >
-                  Courses
-                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a
-                  href="#pricing"
-                  onClick={(e) => handleNavClick(e, 'pricing')}
-                  className="hover:text-ink transition-colors relative group py-2"
-                >
-                  Pricing
-                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a
-                  href="#proof"
-                  onClick={(e) => handleNavClick(e, 'proof')}
-                  className="hover:text-ink transition-colors relative group py-2"
-                >
-                  Proof
-                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <button
-                  onClick={toggleTheme}
-                  className="w-8 h-8 flex items-center justify-center rounded-full bg-subtle hover:bg-ink hover:text-inverse transition-colors"
-                  aria-label="Toggle Dark Mode"
-                >
-                  {theme === 'light' ? <Moon size={14} strokeWidth={2} /> : <Sun size={14} strokeWidth={2} />}
-                </button>
-                <div className="h-4 w-[1px] bg-gray-300 dark:bg-gray-700 mx-1"></div>
-                <a href="https://twitter.com/b2bvic" target="_blank" rel="noreferrer" className="text-gray-500 hover:text-[#1DA1F2] transition-colors">
-                  <Twitter size={18} strokeWidth={2} />
-                </a>
-                <a href="https://linkedin.com/in/b2bvic" target="_blank" rel="noreferrer" className="text-gray-500 hover:text-[#0A66C2] transition-colors">
-                  <Linkedin size={18} strokeWidth={2} />
-                </a>
-              </div>
+      {/* Top Status Bar */}
+      <header className="fixed top-0 left-0 right-0 z-50 border-b border-[#1e3a5f] bg-[#080c14]/95 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 h-12 flex items-center justify-between">
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2">
+              <span className="text-xl" style={{ color: '#2563eb' }}>🌐</span>
+              <span className="font-bold text-sm uppercase tracking-wider text-[#e2e8f0]">SWS</span>
             </div>
+            <div className="hidden md:flex items-center gap-1 text-[10px] uppercase tracking-widest text-[#64748b]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#2563eb] pulse-blue"></span>
+              <span>SYSTEM ONLINE</span>
+            </div>
+          </div>
+
+          <nav className="flex items-center gap-6 text-[10px] uppercase tracking-widest text-[#64748b]">
+            <a href="#courses" className="hover:text-[#2563eb] transition-colors">Modules</a>
+            <a href="#pricing" className="hover:text-[#2563eb] transition-colors">Pricing</a>
+            <a href="#proof" className="hover:text-[#2563eb] transition-colors">Proof</a>
+            <a
+              href="#pricing"
+              className="px-3 py-1.5 bg-[#2563eb] text-white font-bold hover:bg-[#1e40af] transition-colors"
+            >
+              ENROLL
+            </a>
           </nav>
-
-          {/* Main Content */}
-          <main className="relative z-10 w-full transition-colors duration-300">
-            <Hero />
-            <MarqueeTape />
-            <Courses />
-            <div className="w-full h-px bg-gradient-to-r from-transparent via-ink/20 to-transparent"></div>
-            <Pricing />
-            <Proof />
-            <FinalAction />
-          </main>
-
-          <Footer />
         </div>
-      )}
-    </>
+      </header>
+
+      {/* Main Content */}
+      <main className="pt-12">
+        <Hero />
+        <Courses />
+        <Pricing />
+        <Proof />
+      </main>
+
+      <Footer />
+
+      {/* Global grid pattern overlay */}
+      <div className="fixed inset-0 pointer-events-none z-0 grid-pattern"></div>
+    </div>
   );
 };
 
