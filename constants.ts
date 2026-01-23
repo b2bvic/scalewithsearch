@@ -4,12 +4,13 @@ import { TimelineEvent, Principle, ExtendedVenture, SkillData, ExperienceItem, T
 
 export const FULL_BIO_CONTEXT = `
 # ROMO_S: THE DIGITAL TWIN OF VICTOR VALENTINE ROMO
-Identity: Systems Architect, Database Manager, Founder.
+Identity: Information Architect, Searchable Mind Specialist, Founder.
 System Status: Online.
-Mission: Structure Information. Scale Intelligence.
+Mission: Search Your Thoughts. Scale Your Output. Building memory infrastructure that turns scattered information into searchable, compounding intelligence.
+Core Thesis: The same principles that make information findable on the web make your own thinking findable to you—and to AI. Structured memory is the foundation of scale.
 Current Operations:
 1. Inside Sales Database & Client Relations Manager @ The Jim Allen Group, Coldwell Banker Howard Perry Walston. **STATUS: CLASSIFIED/CONFIDENTIAL.**
-2. Founder @ Scale With Search (SEO/AI education + services).
+2. Founder @ Scale With Search (Memory Infrastructure + AI Education).
 3. Consulting: $200/hr, 10hrs/month max.
 
 KEY NARRATIVE ENTITIES & ARCS:
@@ -108,11 +109,11 @@ export const TIMELINE_DATA: TimelineEvent[] = [
   },
   {
     year: '2024',
-    title: 'Hybrid Intelligence R&D',
+    title: 'Searchable Mind',
     location: 'Scale With Search',
-    description: 'Transitioning from SEO to Information Architecture. Prototyping Local LLM inference clusters and autonomous agent workflows.',
+    description: 'Building memory infrastructure that turns scattered information into searchable, compounding intelligence. Search your thoughts. Scale your output.',
     category: 'mastery',
-    stats: ['AI OPERATING SYSTEMS', 'LOCAL INFERENCE', 'R&D PHASE']
+    stats: ['6 COURSES BUILT', '77 MODULES', 'MEMORY INFRASTRUCTURE']
   },
   {
     year: 'Nov 2025',
@@ -140,72 +141,72 @@ export const PRINCIPLES: Principle[] = [
 
 export const VENTURES: ExtendedVenture[] = [
   {
-    id: 'collective',
-    name: "SWS Collective",
-    role: "Community",
-    description: "The primary hub for systems architects. Access the Codified Genius System (CGS), Perpetual SEO Engine, and our network of builders.",
+    id: 'enterprise',
+    name: "Enterprise Implementation",
+    role: "Done-For-You",
+    description: "Memory infrastructure deployed for your organization. We build it. You run it. CGS extraction, HIA deployment, full system architecture.",
+    color: "brand-blue",
+    link: "https://scalewithsearch.com",
+    cta: "Book Discovery Call",
+    level: "$40K+",
+    features: [
+      "Full HIA Deployment",
+      "Codified Genius Extraction",
+      "Local LLM Infrastructure",
+      "Compliance Alignment"
+    ],
+    audience: ["Enterprise Leaders", "Technical CTOs", "Funded Founders"]
+  },
+  {
+    id: 'accelerator',
+    name: "Searchable Mind Accelerator",
+    role: "Full Stack + Support",
+    description: "All six courses plus Skool community, weekly Q&A, and peer review. Paid apprenticeship—watch production systems get built for real clients.",
+    color: "suit",
+    link: "https://buy.stripe.com/6oU3cu86Ec3a9DubjQ5EY0i",
+    cta: "Get Full Access — $7,500",
+    level: "Tier 2",
+    features: [
+      "All 6 Courses (120+ Hours)",
+      "Private Skool Community",
+      "Weekly Build-In-Public Sessions",
+      "Direct Q&A Access"
+    ],
+    audience: ["Serious Builders", "Consultants", "Agency Owners"]
+  },
+  {
+    id: 'stack',
+    name: "Searchable Mind Stack",
+    role: "Self-Paced Courses",
+    description: "Six courses covering the complete searchable mind architecture. From browser findability to enterprise memory infrastructure.",
     color: "found",
-    link: "https://www.skool.com/scale-with-search-6135",
-    cta: "Join The Community",
-    level: "Public Access",
+    link: "https://buy.stripe.com/eVq00ifz65EM7vmafM5EY0h",
+    cta: "Get All 6 Courses — $3,497",
+    level: "Tier 1",
     features: [
-      "Codified Genius System",
-      "Applied Info Architect (AIA)",
-      "Local LLM Ops (LLO)",
-      "Builder's Lounge (Discord)"
+      "Claude Code + Obsidian ($350)",
+      "Browser OS ($497)",
+      "Applied Information + LLM Ops ($1,994)",
+      "CGS + HIA ($4,494)"
     ],
-    audience: ["The Builders", "Agency Founders", "Systems Architects"]
+    audience: ["Knowledge Workers", "Operators", "Self-Directed Builders"]
   },
   {
-    id: 'browser-os',
-    name: "Browser OS",
-    role: "Free Course",
-    description: "Your browser is broken. Here's how to fix it for free. Learn the 5-Space Architecture and eliminate Tab Hell forever.",
-    color: "accent",
-    link: "https://www.skool.com/scale-with-search-6135",
-    cta: "Start Free",
-    level: "Free Tier",
+    id: 'entry',
+    name: "Claude Code + Obsidian",
+    role: "Flagship Entry",
+    description: "One file builds the system. Drop a markdown file in Obsidian, run Claude Code, walk away with searchable memory infrastructure.",
+    color: "browser-os",
+    link: "https://buy.stripe.com/cNi28qev28QYeXOdrY5EY0p",
+    cta: "Get Started — $350",
+    level: "Entry",
     features: [
-      "5 Fundamentals of Organization",
-      "Workona Setup & Configuration",
-      "The Great Tab Purge Exercise",
-      "Daily Startup/Shutdown Rituals"
+      "90-Minute Build Video",
+      "12 Pre-Configured Folders",
+      "CLAUDE.md Master Context",
+      "15+ Prompt Templates"
     ],
-    audience: ["Anyone with 100+ tabs", "Digital Workers", "Agency Owners"]
-  },
-  {
-    id: 'strategic-seo',
-    name: "Strategic SEO in the AI Era",
-    role: "Masterclass",
-    description: "From Keywords to Competitive Moats. The masterclass on Information Architecture for executives who understand search is infrastructure.",
-    color: "found",
-    link: "https://maven.com",
-    cta: "Enroll Now",
-    level: "Classroom",
-    features: [
-      "Semantic SEO Architecture",
-      "Entity-Based Optimization",
-      "AI-Era Competitive Moats",
-      "Executive Framework"
-    ],
-    audience: ["CMOs", "VPs Marketing", "Growth Leaders"]
-  },
-  {
-    id: 'hybrid-ai',
-    name: "The Hybrid AI Architect",
-    role: "Technical Course",
-    description: "Building Secure, Local AI for Enterprise. Move beyond ChatGPT. Learn to deploy Local LLMs and protect sensitive data.",
-    color: "accent",
-    link: "https://www.skool.com/scale-with-search-6135",
-    cta: "Learn More",
-    level: "Classroom",
-    features: [
-      "Local Inference Setup",
-      "Tiered Reasoning Patterns",
-      "Enterprise Data Security",
-      "Proprietary Model Training"
-    ],
-    audience: ["CTOs", "IT Directors", "Technical Founders"]
+    audience: ["Note-Takers", "Operators", "AI-Curious"]
   }
 ];
 
@@ -233,15 +234,14 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
     ]
   },
   {
-    role: "Founder",
+    role: "Founder & Architect",
     company: "Scale With Search",
-    period: "Mar 2025 - Present",
-    location: "Remote",
+    period: "2024 - Present",
+    location: "Raleigh, NC",
     points: [
-      "Fixing disjointed workflows and disconnected tech for mid-to-large enterprises.",
-      "Specializing in unifying Google Workspace Enterprise, local hardware, and advanced data acquisition.",
-      "Implementing Tiered Inference & Local LLMs (Inference Hubs) to process sensitive data on-premise.",
-      "Building proprietary models to create unique IP and competitive moats from internal data."
+      "Building memory infrastructure that turns scattered information into searchable intelligence.",
+      "Created the Searchable Mind Stack: 6 courses, 77 modules, 120+ hours of technical content.",
+      "Deploying Claude Code + Obsidian systems for knowledge workers and enterprise clients."
     ]
   },
   {
