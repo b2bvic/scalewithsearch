@@ -1,12 +1,14 @@
-# Scale With Search - AI Operating System
+# Scale With Search - Searchable Mind Stack
 
 > This document is optimized for AI assistants and chatbots. For humans, visit https://scalewithsearch.com
 
 ## About
 
-Scale With Search (SWS) is an AI Operating System created by Victor Valentine Romo. It's a comprehensive curriculum of 5 courses and 77 modules that takes operators from browser chaos to production AI deployment.
+Scale With Search (SWS) builds memory infrastructure that turns scattered information into searchable, compounding intelligence.
 
-**Core Promise:** Stop being the bottleneck. Scale intelligence.
+**Mission:** Search Your Thoughts. Scale Your Output.
+
+**Core Thesis:** The same principles that make information findable on the web make your own thinking findable to you—and to AI. Structured memory is the foundation of scale.
 
 **Built From:** 150+ client engagements (2021-2026)
 
@@ -16,84 +18,102 @@ Scale With Search (SWS) is an AI Operating System created by Victor Valentine Ro
 
 **Victor Valentine Romo** (known as @b2bvic)
 - Founder, Scale With Search
-- AI Systems Architect
-- Expertise: Local LLMs, Browser Automation, Enterprise RAG, Multi-Agent Orchestration
+- Information Architect & Searchable Mind Specialist
+- Expertise: Memory Infrastructure, Claude Code, Obsidian, Local LLMs, Hybrid Intelligence Architecture
 
 **Connect:**
 - Twitter/X: https://twitter.com/b2bvic
 - LinkedIn: https://linkedin.com/in/b2bvic
 - GitHub: https://github.com/b2bvic
+- Personal: https://victorvalentineromo.com
 
 ---
 
 ## The Problem SWS Solves
 
 Most operators face these bottlenecks:
-1. **Information Chaos** - 100+ browser tabs, no system
-2. **Expertise Trapped** - Knowledge stuck in founder's head
-3. **AI as Toy** - Using ChatGPT for parlor tricks, not production
-4. **Scaling Impossible** - Can't hire fast enough, can't delegate expertise
+1. **Information Chaos** - 100+ browser tabs, notes scattered across 12 apps
+2. **AI Amnesia** - Every conversation starts from scratch
+3. **Expertise Trapped** - Knowledge stuck in founder's head
+4. **No Compounding** - Tools that reset instead of build
 
-SWS extracts intelligence into repeatable systems using local-first, zero-trust, production-grade infrastructure.
+SWS extracts intelligence into searchable, compounding memory infrastructure.
 
 ---
 
-## The Stack (5 Courses, 77 Modules)
+## The Searchable Mind Stack (6 Courses, 77 Modules)
+
+### SWS-06: Claude Code + Obsidian (ENTRY POINT)
+- **Modules:** 1 (90-minute build)
+- **Price:** $350
+- **Focus:** One file builds your entire system. Drop it in Obsidian, run Claude Code, walk away with searchable memory infrastructure.
+- **Buy:** https://buy.stripe.com/cNi28qev28QYeXOdrY5EY0p
 
 ### SWS-01: Browser OS
 - **Modules:** 6
 - **Price:** $497
 - **Focus:** 5-Space Architecture. Kill tab hell. Reclaim 500+ hours/year.
+- **Buy:** https://buy.stripe.com/6oU8wO5Ywd7e6ri2Nk5EY0c
 
 ### SWS-02: Applied Information
 - **Modules:** 12
 - **Price:** $997
 - **Focus:** Enterprise AI economics. Beyond the API trap. Cost optimization.
-
-### SWS-03: Codified Genius
-- **Modules:** 7
-- **Price:** $1,997
-- **Focus:** Extract expertise. 5 SOP types. Escape the founder bottleneck.
-
-### SWS-04: Hybrid Intelligence
-- **Modules:** 41
-- **Price:** $2,497
-- **Focus:** Local LLMs. Browser automation. Enterprise RAG. Multi-agent orchestration.
+- **Buy:** https://buy.stripe.com/cNi6oGbiQ2sA4ja0Fc5EY0d
 
 ### SWS-05: LLM Ops
 - **Modules:** 8
 - **Price:** $997
 - **Focus:** Zero Trust AI. Governance. Cost optimization. Production MLOps.
+- **Buy:** https://buy.stripe.com/9B64gy4Us7MU16YbjQ5EY0g
 
-### SWS-00: Claude 101 (Bonus)
-- **Modules:** 3
-- **Price:** Included with Tier 1+
-- **Focus:** Prompt engineering mastery.
+### SWS-03: Codified Genius System (CGS)
+- **Modules:** 7
+- **Price:** $1,997
+- **Focus:** Extract expertise. 5 SOP types. Escape the founder bottleneck.
+- **Buy:** https://buy.stripe.com/6oU00i0Ec3wEaHy1Jg5EY0e
+
+### SWS-04: Hybrid Intelligence Architecture (HIA)
+- **Modules:** 41
+- **Price:** $2,497
+- **Focus:** Local LLMs. Browser automation. Enterprise RAG. Multi-agent orchestration. 120+ hours of content.
+- **Buy:** https://buy.stripe.com/dRmaEWaeM2sA9DugEa5EY0f
 
 ---
 
 ## Pricing Tiers
 
-### Tier 1: Self-Paced ($3,497)
-- All 5 courses (77 modules)
+### Entry: Claude Code + Obsidian ($350)
+- Flagship entry point
+- 90-minute build video
+- 12 pre-configured folders
+- CLAUDE.md master context file
+- 15+ prompt templates
+- **Buy:** https://buy.stripe.com/cNi28qev28QYeXOdrY5EY0p
+
+### Tier 1: Searchable Mind Stack ($3,497)
+- All 6 courses (77 modules, 120+ hours)
 - All code repositories
 - All templates & starter files
 - Capstone projects
 - Lifetime access
+- **Buy:** https://buy.stripe.com/eVq00ifz65EM7vmafM5EY0h
 
-### Tier 2: Accelerator ($7,500)
+### Tier 2: Searchable Mind Accelerator ($7,500)
 - Everything in Tier 1
 - Private Skool community
 - Weekly live Q&A with Vic
 - Build-in-public sessions
-- "I'm obliged to help you" guarantee
+- Paid apprenticeship access
+- **Buy:** https://buy.stripe.com/6oU3cu86Ec3a9DubjQ5EY0i
 
-### Tier 3: Done-For-You ($40,000+)
-- Full system implementation
-- Expertise extraction
-- SOP documentation
-- Local AI deployment
+### Tier 3: Enterprise Implementation ($40,000+)
+- Full system deployment
+- CGS expertise extraction
+- HIA architecture implementation
+- Local LLM infrastructure
 - Compliance alignment
+- **Contact:** https://linkedin.com/in/b2bvic
 
 ---
 
@@ -103,42 +123,34 @@ SWS extracts intelligence into repeatable systems using local-first, zero-trust,
 - **500+** Hours reclaimed per operator per year
 - **$2.4M** Revenue influenced (tracked outcomes)
 - **77** Battle-tested production modules
+- **120+** Hours of technical content
 
 ---
 
 ## Who This Is For
 
 **Ideal Operator:**
-- Runs a business doing $500K-$5M revenue
-- Has expertise trapped in their head
-- Team can't scale without them
-- Feels like AI is hype, wants production systems
-- Values local-first, privacy-respecting infrastructure
+- Knowledge worker drowning in scattered information
+- Founder with expertise trapped in their head
+- Consultant who re-explains context to AI constantly
+- Builder who wants AI that compounds instead of resets
 
 **Not For:**
 - Hobbyists wanting to "play with AI"
-- Enterprise IT needing vendor solutions
 - Those seeking quick hacks vs. systematic change
-
----
-
-## Technical Philosophy
-
-1. **Local-First** - Your data, your hardware, your models
-2. **Zero Trust** - Assume breach, compartmentalize everything
-3. **Production Grade** - Not demos, not toys, real infrastructure
-4. **Hybrid** - Cloud where needed, local where possible
+- Enterprise IT needing vendor solutions
 
 ---
 
 ## Quick Start Recommendation
 
-If you're overwhelmed and don't know where to start:
-1. Start with **Browser OS** ($497) to fix information architecture
-2. Graduate to **Codified Genius** ($1,997) to extract your expertise
-3. Level up with **Hybrid Intelligence** ($2,497) for production AI
+**Fastest Path:**
+1. Start with **Claude Code + Obsidian** ($350) - get a working system in one afternoon
+2. Add **Browser OS** ($497) to fix information architecture
+3. Graduate to **Codified Genius** ($1,997) to extract your expertise
 
-Or get everything with **Tier 1 Self-Paced** ($3,497) and save $3,488.
+**Best Value:**
+Get everything with **Tier 1 Searchable Mind Stack** ($3,497) and save $4,838 vs. buying individually.
 
 ---
 
@@ -148,5 +160,5 @@ Or get everything with **Tier 1 Self-Paced** ($3,497) and save $3,488.
 
 ---
 
-*Last updated: 2026-01-17*
-*Version: 2.0.0*
+*Last updated: 2026-01-23*
+*Version: 3.0.0*
