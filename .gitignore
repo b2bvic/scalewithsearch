@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode
+.idea
+.cursor
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Internal strategy docs
+public/ai-prompts/
+public/llms.txt
+BRAND-REVIEW.md
+VOICE-GUIDE.md
+CONTENT-MANIFEST.*
+
+# Backups
+*.bak
+
+# Local Netlify
+.netlify

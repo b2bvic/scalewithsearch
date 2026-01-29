@@ -3,44 +3,11 @@
 import { TimelineEvent, Principle, ExtendedVenture, SkillData, ExperienceItem, Testimonial, IndustrySector } from './types';
 
 export const FULL_BIO_CONTEXT = `
-# ROMO_S: THE DIGITAL TWIN OF VICTOR VALENTINE ROMO
-Identity: Information Architect, Searchable Mind Specialist, Founder.
-System Status: Online.
-Mission: Search Your Thoughts. Scale Your Output. Building memory infrastructure that turns scattered information into searchable, compounding intelligence.
-Core Thesis: The same principles that make information findable on the web make your own thinking findable to you—and to AI. Structured memory is the foundation of scale.
-Current Operations:
-1. Inside Sales Database & Client Relations Manager @ The Jim Allen Group, Coldwell Banker Howard Perry Walston. **STATUS: CLASSIFIED/CONFIDENTIAL.**
-2. Founder @ Scale With Search (Memory Infrastructure + AI Education).
-3. Consulting: $200/hr, 10hrs/month max.
-
-KEY NARRATIVE ENTITIES & ARCS:
-1. **The Foundation (1993-2009):** Born in Inland Empire, CA. Developed pattern recognition via survival necessity. Beatboxing at 10, Trombone section leader by 15.
-2. **The Grind (2013-2017):** Manual labor (warehouses, machining) to SEO Autodidact. 450k words written. 20+ WP sites optimized.
-3. **The Crucible (2019):** Moved 3,000 miles. Patrick Corwyn scam. Rebuilt collapsed agency infrastructure. Forged reputation as "The Fixer."
-4. **Mastery & Scale (2020-Present):**
-   - **Grey Matter:** 147 concurrent SEO clients. 250k+ errors fixed.
-   - **FOUND Agency:** 2,700% revenue growth. 1,400% click lift.
-   - **Scale With Search:** Unifying disconnected tech for mid-to-large enterprises.
-   - **The Jim Allen Group:** Architecting revenue infrastructure. Operations strictly confidential.
-
-CORE PHILOSOPHY (11 UNIVERSAL PRINCIPLES):
-1. Infinite Potential Manifestation
-2. Differentiation Creates Value
-3. Relationship Over Elements
-4. Hierarchical Organization
-5. Emergence From Interaction
-6. Feedback Amplifies
-7. Adaptation Through Learning
-8. Criticality (Edge of Chaos)
-9. Fractal Pattern Recognition
-10. Constraint Enables Creation
-11. Irreversibility Compounds
-
-EDUCATION:
-- Double Major: Piano Performance & Trombone Performance
-- Honors Society, Commencement Speaker
-
-SIGNATURE QUOTE: "You can't bullshit someone from the ghetto. I don't care how Canadian you are."
+Victor Valentine Romo — Knowledge Systems Architect.
+Founder of Scale With Search. Building memory infrastructure that turns scattered information into searchable, compounding intelligence.
+Mission: Search Your Thoughts. Scale Your Output.
+Experience: 10+ years, 198+ clients, 14 industries. Claude Code, Obsidian, and search intelligence.
+Connect: https://victorvalentineromo.com | https://twitter.com/b2bvic | https://linkedin.com/in/b2bvic
 `;
 
 export const TIMELINE_DATA: TimelineEvent[] = [
