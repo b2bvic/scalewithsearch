@@ -8,6 +8,31 @@
   status = 200
 
 [[redirects]]
+  from = "/air/law"
+  to = "/air/law.html"
+  status = 200
+
+[[redirects]]
+  from = "/air/roofing"
+  to = "/air/roofing.html"
+  status = 200
+
+[[redirects]]
+  from = "/air/hvac"
+  to = "/air/hvac.html"
+  status = 200
+
+[[redirects]]
+  from = "/air/pest"
+  to = "/air/pest.html"
+  status = 200
+
+[[redirects]]
+  from = "/air/moving"
+  to = "/air/moving.html"
+  status = 200
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
