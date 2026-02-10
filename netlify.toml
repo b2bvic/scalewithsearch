@@ -33,6 +33,46 @@
   status = 200
 
 [[redirects]]
+  from = "/air/fence"
+  to = "/air/fence.html"
+  status = 200
+
+[[redirects]]
+  from = "/air/garage"
+  to = "/air/garage.html"
+  status = 200
+
+[[redirects]]
+  from = "/air/restoration"
+  to = "/air/restoration.html"
+  status = 200
+
+[[redirects]]
+  from = "/air/electrical"
+  to = "/air/electrical.html"
+  status = 200
+
+[[redirects]]
+  from = "/air/plumbing"
+  to = "/air/plumbing.html"
+  status = 200
+
+[[redirects]]
+  from = "/air/concrete"
+  to = "/air/concrete.html"
+  status = 200
+
+[[redirects]]
+  from = "/air/paving"
+  to = "/air/paving.html"
+  status = 200
+
+[[redirects]]
+  from = "/air/medspa"
+  to = "/air/medspa.html"
+  status = 200
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200

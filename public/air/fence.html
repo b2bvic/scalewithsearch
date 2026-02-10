@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Response for Fence Companies | Scale With Search</title>
+    <meta name="description" content="Fence quote requests happen on weekends. Nobody answers. An AI response system captures every lead, qualifies the project, and books the estimate — 24/7.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #080c14;
+            --bg-elevated: #0d1117;
+            --bg-card: #111821;
+            --text: #e2e8f0;
+            --text-muted: #64748b;
+            --text-secondary: #94a3b8;
+            --accent: #2563eb;
+            --accent-hover: #3b82f6;
+            --green: #22c55e;
+            --red: #ef4444;
+            --border: rgba(226, 232, 240, 0.08);
+            --mono: Monaco, Menlo, Consolas, monospace;
+        }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+        .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+        nav { padding: 16px 0; border-bottom: 1px solid var(--border); }
+        nav .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .logo-icon { font-size: 1.2rem; }
+        .logo-text { font-family: var(--mono); font-weight: 700; font-size: 0.85rem; color: var(--text); letter-spacing: 0.5px; text-transform: uppercase; }
+        .logo-badge { font-family: var(--mono); font-size: 9px; color: var(--green); letter-spacing: 1px; text-transform: uppercase; }
+        .nav-cta { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: #fff; background: var(--accent); text-decoration: none; padding: 8px 20px; text-transform: uppercase; letter-spacing: 0.5px; transition: background 0.2s; }
+        .nav-cta:hover { background: var(--accent-hover); }
+        section { padding: 80px 0; border-bottom: 1px solid var(--border); }
+        .sec-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+        .sec-label { font-family: var(--mono); font-size: 10px; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; }
+        .sec-num { font-family: var(--mono); font-size: 10px; color: var(--accent); }
+        h1 { font-family: var(--mono); font-size: clamp(2.4rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.05; letter-spacing: -0.025em; text-transform: uppercase; margin-bottom: 16px; }
+        h2 { font-family: var(--mono); font-size: clamp(1.5rem, 4vw, 3rem); font-weight: 900; letter-spacing: -0.025em; text-transform: uppercase; margin-bottom: 12px; line-height: 1.1; }
+        h3 { font-family: var(--mono); font-size: 1.1rem; font-weight: 900; letter-spacing: -0.5px; text-transform: uppercase; margin-bottom: 8px; }
+        .section-desc { color: var(--text-secondary); max-width: 640px; margin-bottom: 48px; font-size: 1rem; line-height: 1.7; }
+        .hero { padding: 100px 0 80px; }
+        .hero-eyebrow { font-family: var(--mono); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--green); margin-bottom: 24px; }
+        .hero h1 .accent-line { color: var(--accent); }
+        .hero-sub { font-size: 1.1rem; color: var(--text-secondary); max-width: 580px; line-height: 1.7; margin-bottom: 40px; }
+        .hero-actions { display: flex; align-items: center; gap: 24px; margin-bottom: 40px; flex-wrap: wrap; }
+        .hero-stat { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.5px; color: var(--text-muted); text-transform: uppercase; border: 1px solid var(--border); padding: 10px 20px; }
+        .hero-stat strong { color: var(--accent); font-size: 13px; }
+        .hero-specs { display: flex; gap: 32px; margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border); flex-wrap: wrap; }
+        .spec { text-align: left; }
+        .spec-label { font-family: var(--mono); font-size: 9px; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+        .spec-value { font-family: var(--mono); font-size: 1.4rem; font-weight: 700; color: var(--text); }
+        .spec-value.blue { color: var(--accent); }
+        .cta-btn { display: inline-block; font-family: var(--mono); font-size: 0.8rem; font-weight: 700; color: #fff; background: var(--accent); padding: 14px 32px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; transition: background 0.2s; cursor: pointer; border: none; }
+        .cta-btn:hover { background: var(--accent-hover); }
+        .cta-ghost { display: inline-block; font-family: var(--mono); font-size: 0.8rem; font-weight: 700; color: var(--text-secondary); text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; padding: 14px 0; transition: color 0.2s; }
+        .cta-ghost:hover { color: var(--text); }
+        .gap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .gap-card { background: var(--bg-elevated); border: 1px solid var(--border); padding: 32px 28px; }
+        .gap-card.without { border-left: 3px solid var(--red); }
+        .gap-card.with { border-left: 3px solid var(--green); }
+        .gap-card-label { font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 28px; }
+        .without .gap-card-label { color: var(--red); }
+        .with .gap-card-label { color: var(--green); }
+        .gap-step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 18px; }
+        .gap-step:last-child { margin-bottom: 0; }
+        .gap-marker { font-family: var(--mono); font-size: 10px; font-weight: 700; flex-shrink: 0; width: 20px; margin-top: 3px; }
+        .without .gap-marker { color: var(--red); }
+        .with .gap-marker { color: var(--green); }
+        .gap-step-text { font-size: 0.9rem; line-height: 1.5; }
+        .gap-step-text strong { font-family: var(--mono); font-size: 0.82rem; font-weight: 700; display: block; margin-bottom: 2px; text-transform: uppercase; letter-spacing: -0.3px; }
+        .gap-step-text span { color: var(--text-muted); font-size: 0.88rem; }
+        .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .process-card { background: var(--bg-elevated); border: 1px solid var(--border); padding: 32px 24px; }
+        .process-card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+        .process-code { font-family: var(--mono); font-size: 10px; color: var(--accent); letter-spacing: 0.5px; }
+        .process-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; }
+        .math-block { background: var(--bg-elevated); border: 1px solid var(--border); padding: 48px; }
+        .math-equation { display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 32px; }
+        .math-var { text-align: center; }
+        .math-var .num { font-family: var(--mono); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900; line-height: 1.1; }
+        .math-var .num.red { color: var(--red); }
+        .math-var .num.green { color: var(--green); }
+        .math-var .label { font-family: var(--mono); font-size: 10px; color: var(--text-muted); margin-top: 8px; letter-spacing: 0.5px; text-transform: uppercase; }
+        .math-op { font-family: var(--mono); font-size: 1.5rem; color: var(--text-muted); font-weight: 300; }
+        .math-note { color: var(--text-secondary); font-size: 0.95rem; max-width: 540px; margin: 0 auto; text-align: center; line-height: 1.7; }
+        .final-cta { padding: 100px 0; border-bottom: none; }
+        .final-cta .container { text-align: center; }
+        .final-cta h2 { margin-bottom: 16px; }
+        .final-cta p { color: var(--text-secondary); font-size: 1.05rem; max-width: 480px; margin: 0 auto 40px; line-height: 1.7; }
+        .cta-row { display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; }
+        footer { padding: 24px 0; border-top: 1px solid var(--border); }
+        footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+        .footer-left { font-family: var(--mono); font-size: 10px; color: var(--text-muted); letter-spacing: 0.5px; text-transform: uppercase; }
+        .footer-right { display: flex; gap: 20px; }
+        .footer-right a { font-family: var(--mono); font-size: 10px; color: var(--text-muted); text-decoration: none; letter-spacing: 0.5px; text-transform: uppercase; transition: color 0.2s; }
+        .footer-right a:hover { color: var(--accent); }
+        @media (max-width: 768px) {
+            .hero { padding: 60px 0 50px; }
+            section { padding: 60px 0; }
+            .gap-grid { grid-template-columns: 1fr; }
+            .process-grid { grid-template-columns: 1fr; }
+            .math-equation { gap: 16px; }
+            .math-block { padding: 32px 20px; }
+            .final-cta { padding: 60px 0; }
+            .hero-specs { gap: 20px; }
+            .hero-actions { flex-direction: column; align-items: flex-start; }
+        }
+        @media (max-width: 480px) {
+            .gap-card { padding: 24px 18px; }
+            .process-card { padding: 24px 18px; }
+            footer .container { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">&#x1F3D7;</span>
+                <div>
+                    <div class="logo-text">SWS</div>
+                    <div class="logo-badge">AI Response &bull; Fencing</div>
+                </div>
+            </div>
+            <a href="#book" class="nav-cta">Book a Call</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-eyebrow">SWS-AIR &bull; Fence &amp; Outdoor Module</div>
+            <h1>They Want A Quote<br><span class="accent-line">Saturday Morning.</span></h1>
+            <p class="hero-sub">Homeowners research fencing after work and on weekends. They submit a quote request at 10am Saturday. You call back Monday. They've already booked with someone else.</p>
+
+            <div class="hero-actions">
+                <a href="#book" class="cta-btn">See What You're Losing &rarr;</a>
+                <a href="#gap" class="cta-ghost">How It Works</a>
+            </div>
+
+            <div class="hero-stat"><strong>62%</strong> of homeowners request quotes on evenings or weekends</div>
+
+            <div class="hero-specs">
+                <div class="spec">
+                    <div class="spec-label">Response Time</div>
+                    <div class="spec-value blue">&lt;30s</div>
+                </div>
+                <div class="spec">
+                    <div class="spec-label">Coverage</div>
+                    <div class="spec-value">24/7/365</div>
+                </div>
+                <div class="spec">
+                    <div class="spec-label">Integration</div>
+                    <div class="spec-value">Any CRM</div>
+                </div>
+                <div class="spec">
+                    <div class="spec-label">Lead Cost</div>
+                    <div class="spec-value blue">90% Less</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gap">
+        <div class="container">
+            <div class="sec-header">
+                <span class="sec-label">Section</span>
+                <span class="sec-num">01</span>
+            </div>
+            <h2>Same Fence Project.<br>Two Outcomes.</h2>
+            <p class="section-desc">A homeowner just got a new dog. They need a fence before the dog destroys the neighbor's garden. They search 'fence company near me' on Saturday morning.</p>
+
+            <div class="gap-grid">
+                <div class="gap-card without">
+                    <div class="gap-card-label">Without AI Response</div>
+                    <div class="gap-step">
+                        <div class="gap-marker">01</div>
+                        <div class="gap-step-text">
+                            <strong>10:14 AM &mdash; Quote Request Submitted</strong>
+                            <span>Homeowner fills out your contact form with yard dimensions, fence type, and photos.</span>
+                        </div>
+                    </div>
+                    <div class="gap-step">
+                        <div class="gap-marker">02</div>
+                        <div class="gap-step-text">
+                            <strong>10:15 AM &mdash; Auto-Reply</strong>
+                            <span>'Thanks for contacting us! We'll get back to you within 1-2 business days.'</span>
+                        </div>
+                    </div>
+                    <div class="gap-step">
+                        <div class="gap-marker">03</div>
+                        <div class="gap-step-text">
+                            <strong>10:45 AM &mdash; They Submit Two More Quotes</strong>
+                            <span>While waiting, they request estimates from competitors who respond immediately.</span>
+                        </div>
+                    </div>
+                    <div class="gap-step">
+                        <div class="gap-marker">04</div>
+                        <div class="gap-step-text">
+                            <strong>Monday 9 AM &mdash; You Call Back</strong>
+                            <span>'We went with someone else — they came out Saturday afternoon.' A $5,000 job. Gone.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gap-card with">
+                    <div class="gap-card-label">With AI Response</div>
+                    <div class="gap-step">
+                        <div class="gap-marker">01</div>
+                        <div class="gap-step-text">
+                            <strong>10:14 AM &mdash; Quote Request Submitted</strong>
+                            <span>Same homeowner. Same fence. Same Saturday morning.</span>
+                        </div>
+                    </div>
+                    <div class="gap-step">
+                        <div class="gap-marker">02</div>
+                        <div class="gap-step-text">
+                            <strong>10:14 AM &mdash; AI Responds Instantly</strong>
+                            <span>'Thanks for reaching out! Let me get a few details so we can prepare an accurate estimate for you.'</span>
+                        </div>
+                    </div>
+                    <div class="gap-step">
+                        <div class="gap-marker">03</div>
+                        <div class="gap-step-text">
+                            <strong>10:18 AM &mdash; Project Qualified</strong>
+                            <span>Fence type (privacy wood, 6ft), linear footage (~180ft), gate count, slope/grade, HOA restrictions, property survey status — all captured.</span>
+                        </div>
+                    </div>
+                    <div class="gap-step">
+                        <div class="gap-marker">04</div>
+                        <div class="gap-step-text">
+                            <strong>10:19 AM &mdash; Estimate Visit Scheduled</strong>
+                            <span>AI books a Tuesday site visit. Your estimator arrives with project specs already in hand. Homeowner never shopped elsewhere.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="sec-header">
+                <span class="sec-label">Section</span>
+                <span class="sec-num">02</span>
+            </div>
+            <h2>The Stack</h2>
+            <p class="section-desc">An AI response layer that plugs into your existing website and CRM. Captures fence leads 24/7, qualifies the project scope, and books the site visit — before they call someone else.</p>
+
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-card-header">
+                        <div class="process-code">AIR-01</div>
+                    </div>
+                    <h3>Instant Response</h3>
+                    <p>AI answers every web inquiry and call within seconds. Evenings, weekends, holidays. Professional, knowledgeable about fence types and local code requirements.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-card-header">
+                        <div class="process-code">AIR-02</div>
+                    </div>
+                    <h3>Project Qualification</h3>
+                    <p>Asks the right questions — fence type (wood, vinyl, chain link, aluminum), linear footage, purpose (privacy, pet, pool code, decorative), property survey status, HOA restrictions, timeline.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-card-header">
+                        <div class="process-code">AIR-03</div>
+                    </div>
+                    <h3>Estimate Booking</h3>
+                    <p>Qualified leads land in your CRM with full project specs. High-value projects trigger an SMS alert. Site visits get scheduled automatically into your calendar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="sec-header">
+                <span class="sec-label">Section</span>
+                <span class="sec-num">03</span>
+            </div>
+            <h2>Weekend Quotes Lost.<br>Revenue Walked.</h2>
+            <p class="section-desc">Fence companies live and die by weekend estimate requests.</p>
+
+            <div class="math-block">
+                <div class="math-equation">
+                    <div class="math-var">
+                        <div class="num red">3</div>
+                        <div class="label">missed weekend<br>quote requests</div>
+                    </div>
+                    <div class="math-op">&times;</div>
+                    <div class="math-var">
+                        <div class="num red">$4,500</div>
+                        <div class="label">avg fence<br>project value</div>
+                    </div>
+                    <div class="math-op">=</div>
+                    <div class="math-var">
+                        <div class="num green">$54K/mo</div>
+                        <div class="label">in jobs walking<br>to faster competitors</div>
+                    </div>
+                </div>
+                <p class="math-note">A dedicated weekend receptionist costs $3,000+/mo and still misses calls during lunch. This system costs a fraction and never takes a break.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta" id="book">
+        <div class="container">
+            <div class="sec-header" style="justify-content: center;">
+                <span class="sec-label">Section</span>
+                <span class="sec-num">04</span>
+            </div>
+            <h2>Stop Losing Weekend<br>Quote Requests.</h2>
+            <p>15-minute call. I'll show you exactly how many leads your current setup is losing and what each one costs you.</p>
+            <div class="cta-row">
+                <a href="mailto:victor@scalewithsearch.com?subject=AI%20Response%20—%20Fencing%20Inquiry&body=Victor%2C%0A%0AI%20saw%20your%20AI%20response%20page%20for%20fencing.%20I'd%20like%20to%20learn%20more.%0A%0ABusiness%3A%20%0ALocations%3A%20%0ABest%20time%20to%20talk%3A%20" class="cta-btn">Book a Call &rarr;</a>
+                <a href="mailto:victor@scalewithsearch.com" class="cta-ghost">victor@scalewithsearch.com</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-left">&copy; 2026 Scale With Search. All rights reserved.</div>
+            <div class="footer-right">
+                <a href="https://linkedin.com/in/b2bvic">LinkedIn</a>
+                <a href="https://twitter.com/b2bvic">X</a>
+                <a href="https://scalewithsearch.com">SWS</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
