@@ -1,35 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { TESTIMONIALS } from '../constants';
 
 const stats = [
-  { label: 'Client Engagements', value: '150+', sub: 'Enterprise to SMB' },
-  { label: 'Hours Reclaimed/Year', value: '500+', sub: 'Per operator' },
-  { label: 'Revenue Influenced', value: '$2.4M', sub: 'Tracked outcomes' },
-  { label: 'Production Modules', value: '77', sub: 'Battle-tested' }
-];
-
-const testimonials = [
-  {
-    quote: "Vic's system changed how I think about information architecture. The Browser OS alone saved me 10+ hours a week.",
-    name: "Sarah Chen",
-    title: "Founder, TechScale",
-    result: "10hrs/week saved"
-  },
-  {
-    quote: "The Hybrid Intelligence course took my agency from reactive to proactive. We're now deploying local LLMs for every client.",
-    name: "Marcus Webb",
-    title: "CEO, Webb Digital",
-    result: "40% efficiency gain"
-  },
-  {
-    quote: "Codified Genius helped me extract 15 years of expertise into repeatable SOPs. My team can finally scale without me.",
-    name: "Dr. James Liu",
-    title: "Practice Owner",
-    result: "Exited bottleneck"
-  }
+  { label: 'Vault Files', value: '3,130+', sub: 'Indexed & searchable' },
+  { label: 'Documented Sessions', value: '73+', sub: 'Compounding context' },
+  { label: 'Client Engagements', value: '198+', sub: 'Across 14 industries' },
+  { label: 'Production Skills', value: '67', sub: 'Slash commands' }
 ];
 
 const Proof: React.FC = () => {
+  // Use first 3 real testimonials from constants
+  const displayTestimonials = TESTIMONIALS.slice(0, 3);
+
   return (
     <section id="proof" className="py-20 md:py-32 border-b" style={{ borderColor: 'var(--border)' }}>
       <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -52,7 +35,7 @@ const Proof: React.FC = () => {
               Proof of Work
             </h2>
             <p className="mt-2 text-sm uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>
-              Built from real engagements • Not theories
+              Running in production • Not a weekend project
             </p>
           </div>
         </motion.div>
@@ -82,11 +65,37 @@ const Proof: React.FC = () => {
           ))}
         </div>
 
+        {/* Open Source Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          className="border p-6 mb-16 flex flex-col sm:flex-row items-center justify-between gap-4"
+          style={{ backgroundColor: 'var(--bg-panel)', borderColor: 'var(--accent)' }}
+        >
+          <div>
+            <div className="text-[10px] uppercase tracking-widest mb-1" style={{ color: 'var(--accent)' }}>Open Source</div>
+            <div className="text-lg font-bold" style={{ color: 'var(--text-primary)' }}>
+              The full architecture is public. Clone it, run setup.sh, and go.
+            </div>
+          </div>
+          <a
+            href="https://github.com/b2bvic/scale-with-search"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 font-bold uppercase tracking-wider text-sm transition-all hover:translate-y-[-1px] whitespace-nowrap"
+            style={{ backgroundColor: 'var(--accent)', color: 'white' }}
+          >
+            View Repo →
+          </a>
+        </motion.div>
+
         {/* Testimonials */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          {testimonials.map((t, i) => (
+          {displayTestimonials.map((t, i) => (
             <motion.div
-              key={i}
+              key={t.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -97,7 +106,7 @@ const Proof: React.FC = () => {
               {/* Card Header */}
               <div className="border-b px-4 py-3 flex items-center justify-between" style={{ borderColor: 'var(--border)' }}>
                 <span className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>
-                  Testimonial
+                  Signal
                 </span>
                 <span className="text-[10px] uppercase tracking-widest font-bold" style={{ color: 'var(--accent)' }}>
                   {String(i + 1).padStart(2, '0')}
@@ -106,17 +115,14 @@ const Proof: React.FC = () => {
 
               {/* Card Body */}
               <div className="p-6">
-                <p className="mb-6 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                <p className="mb-6 leading-relaxed text-sm" style={{ color: 'var(--text-secondary)' }}>
                   "{t.quote}"
                 </p>
 
                 <div className="pt-4 border-t" style={{ borderColor: 'var(--border)' }}>
-                  <div className="font-bold text-sm" style={{ color: 'var(--text-primary)' }}>{t.name}</div>
-                  <div className="text-[10px] uppercase tracking-widest mb-3" style={{ color: 'var(--text-muted)' }}>
-                    {t.title}
-                  </div>
-                  <div className="inline-block px-2 py-1 text-[10px] uppercase tracking-widest font-bold" style={{ backgroundColor: 'var(--border)', color: 'var(--accent)' }}>
-                    {t.result}
+                  <div className="font-bold text-sm" style={{ color: 'var(--text-primary)' }}>{t.author}</div>
+                  <div className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>
+                    {t.role}
                   </div>
                 </div>
               </div>
@@ -134,7 +140,7 @@ const Proof: React.FC = () => {
           style={{ borderColor: 'var(--border)' }}
         >
           <div className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>
-            Data from: <span style={{ color: 'var(--text-primary)' }}>2021-2026</span> • Verified outcomes
+            Data from: <span style={{ color: 'var(--text-primary)' }}>2013–2026</span> • 14 industries • 198+ engagements
           </div>
           <div className="barcode w-32" style={{ color: 'var(--accent)' }}></div>
         </motion.div>

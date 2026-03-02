@@ -1,17 +1,15 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, useParams, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import ThemeSwitcher from './components/ThemeSwitcher';
 import Hero from './components/Hero';
+import Methodology from './components/Methodology';
 import Courses from './components/Courses';
-import Pricing from './components/Pricing';
 import Proof from './components/Proof';
-import AiAssistant from './components/AiAssistant';
+import Offer from './components/Offer';
 import Footer from './components/Footer';
-import CoursePage from './pages/CoursePage';
-import { courses, getCourseBySlug } from './data/courses';
 
-// Header component for reuse
+// Header component
 const Header: React.FC = () => (
   <header
     className="fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-sm"
@@ -25,62 +23,46 @@ const Header: React.FC = () => (
         </a>
         <div className="hidden md:flex items-center gap-1 text-[10px] uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>
           <span className="w-1.5 h-1.5 rounded-full pulse-accent" style={{ backgroundColor: 'var(--accent)' }}></span>
-          <span>SYSTEM ONLINE</span>
+          <span>OPEN SOURCE</span>
         </div>
       </div>
 
       <nav className="flex items-center gap-4 md:gap-6">
         <div className="hidden sm:flex items-center gap-4 md:gap-6 text-[10px] uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>
-          <a href="/#courses" className="hover:opacity-80 transition-opacity">Modules</a>
-          <a href="/#pricing" className="hover:opacity-80 transition-opacity">Pricing</a>
+          <a href="/#methodology" className="hover:opacity-80 transition-opacity">Architecture</a>
+          <a href="/#capabilities" className="hover:opacity-80 transition-opacity">Capabilities</a>
           <a href="/#proof" className="hover:opacity-80 transition-opacity">Proof</a>
-          <a href="/#ai-assistant" className="hover:opacity-80 transition-opacity">Try It</a>
+          <a href="/#offer" className="hover:opacity-80 transition-opacity">The Offer</a>
         </div>
         <ThemeSwitcher />
         <a
-          href="/#pricing"
+          href="https://github.com/b2bvic/scale-with-search"
+          target="_blank"
+          rel="noopener noreferrer"
           className="px-3 py-1.5 font-bold text-[10px] uppercase tracking-widest transition-opacity hover:opacity-90"
           style={{ backgroundColor: 'var(--accent)', color: 'white' }}
         >
-          ENROLL
+          REPO
         </a>
       </nav>
     </div>
   </header>
 );
 
-// Home page
+// Home page — section order follows the narrative:
+// Hero (problem) → Methodology (how) → Capabilities (what) → Proof (evidence) → Offer (action)
 const HomePage: React.FC = () => (
   <>
     <main className="pt-12">
       <Hero />
+      <Methodology />
       <Courses />
-      <Pricing />
       <Proof />
-      <AiAssistant />
+      <Offer />
     </main>
     <Footer />
   </>
 );
-
-// Course page wrapper
-const CoursePageWrapper: React.FC = () => {
-  const { slug } = useParams<{ slug: string }>();
-  const course = slug ? getCourseBySlug(slug) : undefined;
-
-  if (!course) {
-    return <Navigate to="/" replace />;
-  }
-
-  return (
-    <>
-      <main className="pt-12">
-        <CoursePage course={course} />
-      </main>
-      <Footer />
-    </>
-  );
-};
 
 const App: React.FC = () => {
   return (
@@ -91,7 +73,6 @@ const App: React.FC = () => {
 
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/course/:slug" element={<CoursePageWrapper />} />
           </Routes>
 
           {/* Global grid pattern overlay */}

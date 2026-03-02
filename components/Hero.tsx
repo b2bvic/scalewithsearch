@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
               className="sidebar-text text-[10px] uppercase tracking-[0.3em] font-bold"
               style={{ color: 'var(--text-muted)' }}
             >
-              AI Operating System
+              Memory Infrastructure
             </motion.div>
           </div>
 
@@ -35,13 +35,13 @@ const Hero: React.FC = () => {
             >
               <div className="flex items-center gap-4">
                 <span className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>INDEX</span>
-                <span className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--accent)' }}>v2.0</span>
+                <span className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--accent)' }}>v3.0</span>
               </div>
               <div className="flex items-center gap-4">
                 <span className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>STATUS</span>
                 <span className="flex items-center gap-1 text-[10px] uppercase tracking-widest" style={{ color: 'var(--success)' }}>
                   <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: 'var(--success)' }}></span>
-                  ENROLLMENT OPEN
+                  OPEN SOURCE
                 </span>
               </div>
             </motion.div>
@@ -73,11 +73,11 @@ const Hero: React.FC = () => {
             >
               <div className="absolute -left-4 top-0 bottom-0 w-1" style={{ backgroundColor: 'var(--accent)' }}></div>
               <h1 className="text-4xl sm:text-5xl md:text-7xl font-black uppercase tracking-tight leading-[0.9]" style={{ color: 'var(--text-primary)' }}>
-                Stop Being<br />
-                The Bottleneck
+                Your AI Forgets<br />
+                Everything
               </h1>
               <div className="mt-4 text-xl md:text-2xl font-bold uppercase tracking-wider" style={{ color: 'var(--accent)' }}>
-                Scale Intelligence
+                I Build The System That Fixes That
               </div>
             </motion.div>
 
@@ -90,15 +90,16 @@ const Hero: React.FC = () => {
               style={{ backgroundColor: 'var(--bg-panel)', borderColor: 'var(--border)' }}
             >
               <div className="text-[10px] uppercase tracking-widest mb-3" style={{ color: 'var(--text-muted)' }}>
-                System Description
+                The Problem
               </div>
               <p className="text-base md:text-lg leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                Your expertise trapped in your head. Every decision flows through you.
-                You can't hire fast enough. AI feels like toys, not tools.
+                Every conversation starts from scratch. You re-explain your business to AI weekly.
+                Notes scattered across twelve apps. Context lost between sessions.
               </p>
               <p className="text-base md:text-lg leading-relaxed mt-3" style={{ color: 'var(--text-primary)' }}>
-                The SWS Operating System extracts your intelligence into repeatable systems.
-                Local LLMs. Browser automation. Production RAG. Multi-agent orchestration.
+                Claude Code + Obsidian vault architecture with persistent memory across conversations.
+                Domain routing loads context automatically. Semantic search surfaces past sessions.
+                Open-source core. Custom builds for operators who want it done right.
               </p>
             </motion.div>
 
@@ -110,19 +111,21 @@ const Hero: React.FC = () => {
               className="flex flex-col sm:flex-row gap-4"
             >
               <a
-                href="#pricing"
+                href="#offer"
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 font-bold uppercase tracking-wider text-sm transition-all hover:translate-y-[-2px]"
                 style={{ backgroundColor: 'var(--accent)', color: 'white' }}
               >
-                View Pricing
+                I Build This For You
                 <span style={{ opacity: 0.7 }}>→</span>
               </a>
               <a
-                href="#courses"
+                href="https://github.com/b2bvic/scale-with-search"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 border font-bold uppercase tracking-wider text-sm transition-all"
                 style={{ borderColor: 'var(--border)', color: 'var(--text-secondary)' }}
               >
-                Explore Modules
+                Inspect The Source
               </a>
             </motion.div>
 
@@ -139,39 +142,39 @@ const Hero: React.FC = () => {
 
               {/* Panel Header */}
               <div className="border-b px-4 py-3 flex items-center justify-between" style={{ borderColor: 'var(--border)' }}>
-                <span className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>System Specs</span>
-                <span className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--accent)' }}>2026</span>
+                <span className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>Production Stats</span>
+                <span className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--accent)' }}>LIVE</span>
               </div>
 
               {/* Specs List */}
               <div className="p-4 space-y-6">
 
                 <div>
-                  <div className="text-[10px] uppercase tracking-widest mb-1" style={{ color: 'var(--text-muted)' }}>Courses</div>
-                  <div className="text-4xl font-black" style={{ color: 'var(--text-primary)' }}>5</div>
+                  <div className="text-[10px] uppercase tracking-widest mb-1" style={{ color: 'var(--text-muted)' }}>Vault Files</div>
+                  <div className="text-4xl font-black" style={{ color: 'var(--text-primary)' }}>3,130+</div>
                 </div>
 
                 <div>
-                  <div className="text-[10px] uppercase tracking-widest mb-1" style={{ color: 'var(--text-muted)' }}>Modules</div>
-                  <div className="text-4xl font-black" style={{ color: 'var(--text-primary)' }}>77</div>
+                  <div className="text-[10px] uppercase tracking-widest mb-1" style={{ color: 'var(--text-muted)' }}>Sessions Logged</div>
+                  <div className="text-4xl font-black" style={{ color: 'var(--text-primary)' }}>73+</div>
                 </div>
 
                 <div>
-                  <div className="text-[10px] uppercase tracking-widest mb-1" style={{ color: 'var(--text-muted)' }}>Runtime</div>
-                  <div className="text-2xl font-black" style={{ color: 'var(--text-primary)' }}>~120h</div>
+                  <div className="text-[10px] uppercase tracking-widest mb-1" style={{ color: 'var(--text-muted)' }}>Skills</div>
+                  <div className="text-2xl font-black" style={{ color: 'var(--text-primary)' }}>17</div>
                 </div>
 
                 <div className="pt-4 border-t" style={{ borderColor: 'var(--border)' }}>
-                  <div className="text-[10px] uppercase tracking-widest mb-1" style={{ color: 'var(--text-muted)' }}>Built From</div>
-                  <div className="text-2xl font-black" style={{ color: 'var(--accent)' }}>150+</div>
-                  <div className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>Client Engagements</div>
+                  <div className="text-[10px] uppercase tracking-widest mb-1" style={{ color: 'var(--text-muted)' }}>Domains Managed</div>
+                  <div className="text-2xl font-black" style={{ color: 'var(--accent)' }}>5</div>
+                  <div className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>Two Jobs + Clients</div>
                 </div>
 
                 {/* Barcode */}
                 <div className="pt-4">
                   <div className="barcode w-full" style={{ color: 'var(--accent)' }}></div>
                   <div className="text-[8px] uppercase tracking-widest mt-2 text-center" style={{ color: 'var(--text-muted)' }}>
-                    SWS-OS-2026-PROD
+                    SWS-MEMORY-2026
                   </div>
                 </div>
 
@@ -192,18 +195,18 @@ const Hero: React.FC = () => {
       >
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-3 flex flex-wrap items-center justify-between gap-4 text-[10px] uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>
           <div className="flex items-center gap-6">
-            <span>Browser OS</span>
+            <span>Domain Routing</span>
             <span style={{ color: 'var(--border)' }}>|</span>
-            <span>Applied Information</span>
+            <span>Semantic Memory</span>
             <span style={{ color: 'var(--border)' }}>|</span>
-            <span>Codified Genius</span>
+            <span>Skill System</span>
             <span style={{ color: 'var(--border)' }}>|</span>
-            <span className="hidden sm:inline">Hybrid Intelligence</span>
+            <span className="hidden sm:inline">Self-Repair</span>
             <span className="hidden sm:inline" style={{ color: 'var(--border)' }}>|</span>
-            <span className="hidden sm:inline">LLM Ops</span>
+            <span className="hidden sm:inline">Open Source</span>
           </div>
           <div style={{ color: 'var(--accent)' }}>
-            Local-First • Zero Trust • Production Grade
+            Claude Code • Obsidian • Persistent Memory
           </div>
         </div>
       </motion.div>
