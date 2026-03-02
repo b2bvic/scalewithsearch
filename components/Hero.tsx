@@ -142,32 +142,35 @@ const Hero: React.FC = () => {
 
               {/* Panel Header */}
               <div className="border-b px-4 py-3 flex items-center justify-between" style={{ borderColor: 'var(--border)' }}>
-                <span className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>Production Stats</span>
-                <span className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--accent)' }}>LIVE</span>
+                <span className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>The Builder</span>
+                <span className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--accent)' }}>@b2bvic</span>
               </div>
 
               {/* Specs List */}
               <div className="p-4 space-y-6">
 
                 <div>
-                  <div className="text-[10px] uppercase tracking-widest mb-1" style={{ color: 'var(--text-muted)' }}>Vault Files</div>
-                  <div className="text-4xl font-black" style={{ color: 'var(--text-primary)' }}>3,130+</div>
+                  <div className="text-[10px] uppercase tracking-widest mb-1" style={{ color: 'var(--text-muted)' }}>Clients Served</div>
+                  <div className="text-4xl font-black" style={{ color: 'var(--text-primary)' }}>198+</div>
                 </div>
 
                 <div>
-                  <div className="text-[10px] uppercase tracking-widest mb-1" style={{ color: 'var(--text-muted)' }}>Sessions Logged</div>
-                  <div className="text-4xl font-black" style={{ color: 'var(--text-primary)' }}>73+</div>
+                  <div className="text-[10px] uppercase tracking-widest mb-1" style={{ color: 'var(--text-muted)' }}>Industries</div>
+                  <div className="text-4xl font-black" style={{ color: 'var(--text-primary)' }}>14</div>
                 </div>
 
                 <div>
-                  <div className="text-[10px] uppercase tracking-widest mb-1" style={{ color: 'var(--text-muted)' }}>Skills</div>
-                  <div className="text-2xl font-black" style={{ color: 'var(--text-primary)' }}>17</div>
+                  <div className="text-[10px] uppercase tracking-widest mb-1" style={{ color: 'var(--text-muted)' }}>Years Building</div>
+                  <div className="text-2xl font-black" style={{ color: 'var(--text-primary)' }}>13</div>
                 </div>
 
                 <div className="pt-4 border-t" style={{ borderColor: 'var(--border)' }}>
-                  <div className="text-[10px] uppercase tracking-widest mb-1" style={{ color: 'var(--text-muted)' }}>Domains Managed</div>
-                  <div className="text-2xl font-black" style={{ color: 'var(--accent)' }}>5</div>
-                  <div className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>Two Jobs + Clients</div>
+                  <div className="text-[10px] uppercase tracking-widest mb-1" style={{ color: 'var(--text-muted)' }}>System Status</div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: 'var(--success)' }}></span>
+                    <span className="text-lg font-black" style={{ color: 'var(--success)' }}>LIVE</span>
+                  </div>
+                  <div className="text-[10px] uppercase tracking-widest mt-1" style={{ color: 'var(--text-muted)' }}>Running 24/7 on my own work</div>
                 </div>
 
                 {/* Barcode */}

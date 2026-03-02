@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import { TESTIMONIALS } from '../constants';
 
 const stats = [
-  { label: 'Vault Files', value: '3,130+', sub: 'Indexed & searchable' },
-  { label: 'Documented Sessions', value: '73+', sub: 'Compounding context' },
-  { label: 'Client Engagements', value: '198+', sub: 'Across 14 industries' },
-  { label: 'Production Skills', value: '67', sub: 'Slash commands' }
+  { label: 'Client Engagements', value: '198+', sub: 'Since 2013' },
+  { label: 'Industries Served', value: '14', sub: 'B2B, SaaS, Healthcare, Trades' },
+  { label: 'Years Building', value: '13', sub: 'SEO → AI Systems' },
+  { label: 'Running In Production', value: '24/7', sub: 'Not a demo' }
 ];
 
 const Proof: React.FC = () => {
@@ -140,7 +140,7 @@ const Proof: React.FC = () => {
           style={{ borderColor: 'var(--border)' }}
         >
           <div className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>
-            Data from: <span style={{ color: 'var(--text-primary)' }}>2013–2026</span> • 14 industries • 198+ engagements
+            Built by: <span style={{ color: 'var(--text-primary)' }}>Victor Romo (@b2bvic)</span> • Raleigh, NC
           </div>
           <div className="barcode w-32" style={{ color: 'var(--accent)' }}></div>
         </motion.div>
