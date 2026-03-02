@@ -1,6 +1,6 @@
 
 
-import { TimelineEvent, Principle, ExtendedVenture, SkillData, ExperienceItem, Testimonial, IndustrySector } from './types';
+import { TimelineEvent, Principle, SkillData, ExperienceItem, Testimonial, IndustrySector } from './types';
 
 export const FULL_BIO_CONTEXT = `
 Victor Valentine Romo — Knowledge Systems Architect.
@@ -106,76 +106,8 @@ export const PRINCIPLES: Principle[] = [
   { id: 11, title: "Irreversibility", description: "Time flows one direction; every month without systems work is permanent loss." }
 ];
 
-export const VENTURES: ExtendedVenture[] = [
-  {
-    id: 'enterprise',
-    name: "Enterprise Implementation",
-    role: "Done-For-You",
-    description: "Memory infrastructure deployed for your organization. We build it. You run it. CGS extraction, HIA deployment, full system architecture.",
-    color: "brand-blue",
-    link: "https://scalewithsearch.com",
-    cta: "Book Discovery Call",
-    level: "$40K+",
-    features: [
-      "Full HIA Deployment",
-      "Codified Genius Extraction",
-      "Local LLM Infrastructure",
-      "Compliance Alignment"
-    ],
-    audience: ["Enterprise Leaders", "Technical CTOs", "Funded Founders"]
-  },
-  {
-    id: 'accelerator',
-    name: "Searchable Mind Accelerator",
-    role: "Full Stack + Support",
-    description: "All six courses plus Skool community, weekly Q&A, and peer review. Paid apprenticeship—watch production systems get built for real clients.",
-    color: "suit",
-    link: "https://buy.stripe.com/6oU3cu86Ec3a9DubjQ5EY0i",
-    cta: "Get Full Access — $7,500",
-    level: "Tier 2",
-    features: [
-      "All 6 Courses (120+ Hours)",
-      "Private Skool Community",
-      "Weekly Build-In-Public Sessions",
-      "Direct Q&A Access"
-    ],
-    audience: ["Serious Builders", "Consultants", "Agency Owners"]
-  },
-  {
-    id: 'stack',
-    name: "Searchable Mind Stack",
-    role: "Self-Paced Courses",
-    description: "Six courses covering the complete searchable mind architecture. From browser findability to enterprise memory infrastructure.",
-    color: "found",
-    link: "https://buy.stripe.com/eVq00ifz65EM7vmafM5EY0h",
-    cta: "Get All 6 Courses — $3,497",
-    level: "Tier 1",
-    features: [
-      "Claude Code + Obsidian ($350)",
-      "Browser OS ($497)",
-      "Applied Information + LLM Ops ($1,994)",
-      "CGS + HIA ($4,494)"
-    ],
-    audience: ["Knowledge Workers", "Operators", "Self-Directed Builders"]
-  },
-  {
-    id: 'entry',
-    name: "Claude Code + Obsidian",
-    role: "Flagship Entry",
-    description: "One file builds the system. Drop a markdown file in Obsidian, run Claude Code, walk away with searchable memory infrastructure.",
-    color: "browser-os",
-    link: "https://buy.stripe.com/cNi28qev28QYeXOdrY5EY0p",
-    cta: "Get Started — $350",
-    level: "Entry",
-    features: [
-      "90-Minute Build Video",
-      "12 Pre-Configured Folders",
-      "CLAUDE.md Master Context",
-      "15+ Prompt Templates"
-    ],
-    audience: ["Note-Takers", "Operators", "AI-Curious"]
-  }
-];
+// VENTURES removed — old course marketplace tiers.
+// Current offer lives in components/Offer.tsx (single consulting offer, scope-based pricing).
 
 export const SKILLS_DATA: SkillData[] = [
   { subject: 'Database Arch', A: 99, fullMark: 100 },

@@ -3,40 +3,46 @@ import { motion } from 'framer-motion';
 
 const capabilities = [
   {
-    id: 'SWS-01',
-    name: 'Browser OS',
-    modules: 6,
-    desc: '5-Space Architecture. Kill tab hell. Reclaim 500+ hours/year.',
+    id: 'SYS-01',
+    name: 'Domain Routing',
+    status: 'ACTIVE',
+    desc: 'Say "client" and your AI loads client context. Say "lead" and it loads CRM state. Keyword matching injects the right _context.md before Claude even starts thinking. No manual loading. No "let me give you background." It already knows.',
+    tech: 'UserPromptSubmit hook → route-domain.sh'
   },
   {
-    id: 'SWS-02',
-    name: 'Applied Information',
-    modules: 12,
-    desc: 'Enterprise AI economics. Hybrid sovereignty. Cost optimization at scale.',
+    id: 'SYS-02',
+    name: 'Semantic Memory',
+    status: 'ACTIVE',
+    desc: 'Every tool call triggers a BM25 search against your vault. Past sessions, documented patterns, and archived decisions surface mid-conversation without you asking. Claude remembers what you solved three weeks ago because the hook queries it automatically.',
+    tech: 'PreToolUse hook → pretool-memory.sh → QMD'
   },
   {
-    id: 'SWS-03',
-    name: 'Codified Genius',
-    modules: 7,
-    desc: 'Expertise extraction. 5 SOP types. Escape the founder bottleneck.',
+    id: 'SYS-03',
+    name: 'Skill System',
+    status: 'ACTIVE',
+    desc: 'Slash commands that do real work. /morning generates a daily dashboard. /dispatch reads your client queue and produces deliverables. /brief writes research-backed content briefs. Each skill is a markdown file that Claude executes — you write new ones in plain English.',
+    tech: '.claude/commands/*.md'
   },
   {
-    id: 'SWS-04',
-    name: 'Hybrid Intelligence',
-    modules: 41,
-    desc: 'Local LLMs. Browser automation. Enterprise RAG. Multi-agent orchestration.',
+    id: 'SYS-04',
+    name: 'Self-Repair',
+    status: 'ACTIVE',
+    desc: 'Context files carry staleness timestamps. When data drifts past 48 hours, the system warns Claude before it acts on outdated state. Skills detect broken paths and fix them. QMD reindexes hourly. The vault maintains itself or tells you what needs attention.',
+    tech: 'last_verified:: timestamps + launchd timers'
   },
   {
-    id: 'SWS-05',
-    name: 'LLM Ops',
-    modules: 8,
-    desc: 'Governance, compliance, and cost control for production AI systems.',
+    id: 'SYS-05',
+    name: 'Voice Calibration',
+    status: 'ACTIVE',
+    desc: 'Your AI writes like you, not like AI. Observer Protocol strips sycophancy, filler, and neat conclusions. Lexical density rules force precise vocabulary. The voice section in CLAUDE.md trains Claude once — every session inherits it.',
+    tech: 'CLAUDE.md voice rules + Observer Protocol'
   },
   {
-    id: 'SWS-06',
-    name: 'Claude Code + Obsidian',
-    modules: 1,
-    desc: 'One file builds the system. Persistent memory infrastructure from one conversation.',
+    id: 'SYS-06',
+    name: 'Always-On Infrastructure',
+    status: 'ACTIVE',
+    desc: 'Telegram bot accepts voice and text 24/7. Systemd timers run scheduled jobs while your laptop sleeps. Syncthing keeps the vault synchronized between machines. The system operates whether you\'re at the keyboard or not.',
+    tech: 'VPS + Telegram bot + systemd + Syncthing'
   }
 ];
 
@@ -60,10 +66,10 @@ const Courses: React.FC = () => {
               <div className="flex-1 h-px" style={{ backgroundColor: 'var(--border)' }}></div>
             </div>
             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight" style={{ color: 'var(--text-primary)' }}>
-              What The System Covers
+              What Gets Built
             </h2>
             <p className="mt-2 text-sm uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>
-              77 modules of documented depth • 6 knowledge domains • Built from production
+              Six subsystems • Each running in production now • Your build inherits all of them
             </p>
           </div>
         </motion.div>
@@ -85,27 +91,25 @@ const Courses: React.FC = () => {
                 <span className="text-[10px] uppercase tracking-widest font-bold" style={{ color: 'var(--accent)' }}>
                   {cap.id}
                 </span>
-                <span className="text-[10px] uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>
-                  {cap.modules} {cap.modules === 1 ? 'Module' : 'Modules'}
+                <span className="flex items-center gap-1 text-[10px] uppercase tracking-widest" style={{ color: 'var(--success)' }}>
+                  <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: 'var(--success)' }}></span>
+                  {cap.status}
                 </span>
               </div>
 
               {/* Card Body */}
               <div className="p-4">
-                <h3 className="text-xl font-black uppercase tracking-tight mb-2 transition-colors" style={{ color: 'var(--text-primary)' }}>
+                <h3 className="text-xl font-black uppercase tracking-tight mb-3 transition-colors" style={{ color: 'var(--text-primary)' }}>
                   {cap.name}
                 </h3>
-                <p className="text-sm mb-4 min-h-[40px]" style={{ color: 'var(--text-muted)' }}>
+                <p className="text-sm mb-4 leading-relaxed" style={{ color: 'var(--text-muted)' }}>
                   {cap.desc}
                 </p>
 
-                {/* Footer */}
-                <div className="flex items-center justify-between pt-4 border-t" style={{ borderColor: 'var(--border)' }}>
-                  <span className="text-[10px] uppercase tracking-widest font-bold" style={{ color: 'var(--text-muted)' }}>
-                    Documented Depth
-                  </span>
-                  <span className="text-[10px] uppercase tracking-widest font-bold" style={{ color: 'var(--accent)' }}>
-                    Included In Build
+                {/* Tech Footer */}
+                <div className="pt-3 border-t" style={{ borderColor: 'var(--border)' }}>
+                  <span className="text-[9px] uppercase tracking-widest font-mono" style={{ color: 'var(--text-muted)', opacity: 0.6 }}>
+                    {cap.tech}
                   </span>
                 </div>
               </div>
@@ -113,7 +117,7 @@ const Courses: React.FC = () => {
           ))}
         </div>
 
-        {/* Bottom Stats */}
+        {/* Bottom Strip */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -123,9 +127,8 @@ const Courses: React.FC = () => {
           style={{ borderColor: 'var(--border)' }}
         >
           <div className="flex items-center gap-8 text-[10px] uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>
-            <span>Total: <span className="font-bold" style={{ color: 'var(--text-primary)' }}>77 Modules</span></span>
-            <span>Domains: <span className="font-bold" style={{ color: 'var(--text-primary)' }}>6</span></span>
-            <span>Source: <span className="font-bold" style={{ color: 'var(--text-primary)' }}>Production</span></span>
+            <span>Architecture: <span className="font-bold" style={{ color: 'var(--text-primary)' }}>Open Source</span></span>
+            <span>Custom Builds: <span className="font-bold" style={{ color: 'var(--accent)' }}>Available</span></span>
           </div>
           <div className="barcode w-32" style={{ color: 'var(--accent)' }}></div>
         </motion.div>
