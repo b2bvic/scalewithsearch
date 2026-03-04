@@ -8,6 +8,7 @@ import Courses from './components/Courses';
 import Proof from './components/Proof';
 import Offer from './components/Offer';
 import Footer from './components/Footer';
+import SystemPage from './components/SystemPage';
 
 // Header component
 const Header: React.FC = () => (
@@ -73,6 +74,7 @@ const App: React.FC = () => {
 
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/system" element={<><SystemPage /><Footer /></>} />
           </Routes>
 
           {/* Global grid pattern overlay */}
