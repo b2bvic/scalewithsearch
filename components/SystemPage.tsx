@@ -253,8 +253,8 @@ const SystemPage: React.FC = () => {
       {/* ═══════════════════════════════════════════════
           SECTION 1: HERO
           ═══════════════════════════════════════════════ */}
-      <section className="min-h-screen relative overflow-hidden border-b" style={{ borderColor: 'var(--border)' }}>
-        <div className="max-w-7xl mx-auto px-4 md:px-8 py-20 md:py-32 relative z-10">
+      <section className="min-h-screen relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-24 lg:py-32 relative z-10">
           <div className="grid grid-cols-12 gap-4 md:gap-6">
 
             <div className="hidden lg:flex col-span-1 items-center justify-center">
@@ -322,7 +322,7 @@ const SystemPage: React.FC = () => {
       {/* ═══════════════════════════════════════════════
           SECTION 2: THE STACK
           ═══════════════════════════════════════════════ */}
-      <section id="stack" className="py-20 md:py-32 border-b" style={{ borderColor: 'var(--border)' }}>
+      <section id="stack" className="py-12 md:py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
             <div className="flex items-center gap-4 mb-4">
@@ -371,7 +371,7 @@ const SystemPage: React.FC = () => {
       {/* ═══════════════════════════════════════════════
           SECTION 3: THE 11 SYSTEMS
           ═══════════════════════════════════════════════ */}
-      <section id="systems" className="py-20 md:py-32 border-b" style={{ borderColor: 'var(--border)' }}>
+      <section id="systems" className="py-12 md:py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
             <div className="flex items-center gap-4 mb-4">
@@ -387,18 +387,18 @@ const SystemPage: React.FC = () => {
             {(showAllSystems ? systems : systems.slice(0, 4)).map((sys, i) => (
               <motion.div key={sys.num} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
                 transition={{ delay: i * 0.05, duration: 0.4 }}
-                className="border p-4 md:p-6 grid grid-cols-12 gap-4 items-center hover:translate-x-1 transition-transform"
+                className="border p-4 md:p-6 grid grid-cols-12 gap-2 md:gap-4 items-center hover:translate-x-1 transition-transform"
                 style={{ backgroundColor: 'var(--bg-panel)', borderColor: 'var(--border)' }}>
-                <div className="col-span-1 flex items-center gap-2">
+                <div className="col-span-2 md:col-span-1 flex items-center gap-2">
                   <SystemIcon id={sys.num} />
                 </div>
                 <div className="col-span-1 hidden md:block">
                   <span className="text-[10px] uppercase tracking-widest font-bold" style={{ color: 'var(--accent)' }}>{sys.num}</span>
                 </div>
-                <div className="col-span-7 md:col-span-4">
+                <div className="col-span-10 md:col-span-4">
                   <h3 className="text-sm md:text-base font-black uppercase tracking-tight" style={{ color: 'var(--text-primary)' }}>{sys.name}</h3>
                 </div>
-                <div className="col-span-4 md:col-span-4">
+                <div className="col-span-12 md:col-span-4">
                   <p className="text-xs leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{sys.kills}</p>
                 </div>
                 <div className="hidden md:block col-span-2 text-right">
@@ -436,7 +436,7 @@ const SystemPage: React.FC = () => {
       {/* ═══════════════════════════════════════════════
           SECTION 4: WHAT CHANGES
           ═══════════════════════════════════════════════ */}
-      <section className="py-20 md:py-32 border-b" style={{ borderColor: 'var(--border)' }}>
+      <section className="py-12 md:py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mx-auto">
             <h2 className="text-[10px] uppercase tracking-widest mb-6 text-center font-bold" style={{ color: 'var(--accent)' }}>What Changes</h2>
@@ -463,7 +463,7 @@ const SystemPage: React.FC = () => {
       {/* ═══════════════════════════════════════════════
           SECTION 5: THE BUILDER
           ═══════════════════════════════════════════════ */}
-      <section className="py-20 md:py-32 border-b" style={{ borderColor: 'var(--border)' }}>
+      <section className="py-12 md:py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
             <div className="flex items-center gap-4 mb-4">
@@ -477,7 +477,16 @@ const SystemPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             {/* Credentials card */}
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-              className="lg:col-span-4 border rounded-lg p-6" style={{ backgroundColor: 'var(--bg-panel)', borderColor: 'var(--border)' }}>
+              className="lg:col-span-4 border rounded-lg overflow-hidden" style={{ backgroundColor: 'var(--bg-panel)', borderColor: 'var(--border)' }}>
+              <div className="aspect-square overflow-hidden">
+                <img
+                  src="/victor-romo.webp"
+                  alt="Victor Valentine Romo — AI Systems Architect"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6">
               <div className="border-b pb-4 mb-4" style={{ borderColor: 'var(--border)' }}>
                 <div className="text-2xl font-black uppercase tracking-tight" style={{ color: 'var(--text-primary)' }}>Victor Valentine Romo</div>
                 <div className="text-[10px] uppercase tracking-widest mt-1" style={{ color: 'var(--accent)' }}>@b2bvic</div>
@@ -501,6 +510,7 @@ const SystemPage: React.FC = () => {
                   <span className="text-sm font-black" style={{ color: 'var(--success)' }}>LIVE</span>
                 </div>
                 <div className="text-[10px] uppercase tracking-widest mt-1" style={{ color: 'var(--text-muted)' }}>Running 24/7 on my own work</div>
+              </div>
               </div>
             </motion.div>
 
@@ -541,7 +551,7 @@ const SystemPage: React.FC = () => {
       {/* ═══════════════════════════════════════════════
           SECTION 6: PRICING
           ═══════════════════════════════════════════════ */}
-      <section id="pricing" className="py-20 md:py-32 border-b" style={{ borderColor: 'var(--border)' }}>
+      <section id="pricing" className="py-12 md:py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
             <div className="flex items-center gap-4 mb-4">
@@ -646,7 +656,7 @@ const SystemPage: React.FC = () => {
       {/* ═══════════════════════════════════════════════
           SECTION 7: FAQ
           ═══════════════════════════════════════════════ */}
-      <section className="py-20 md:py-32 border-b" style={{ borderColor: 'var(--border)' }}>
+      <section className="py-12 md:py-24 lg:py-32">
         <div className="max-w-3xl mx-auto px-4 md:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
             <div className="flex items-center gap-4 mb-4">
@@ -682,7 +692,7 @@ const SystemPage: React.FC = () => {
       {/* ═══════════════════════════════════════════════
           SECTION 8: FINAL CTA
           ═══════════════════════════════════════════════ */}
-      <section className="py-20 md:py-32">
+      <section className="py-12 md:py-24 lg:py-32">
         <div className="max-w-3xl mx-auto px-4 md:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase tracking-tight mb-6" style={{ color: 'var(--text-primary)' }}>
